@@ -1,0 +1,7 @@
+.devFlex{
+  @apply flex items-center 
+}
+
+.fontSize{
+  @apply font-Poppins font-semibold  md:text-xs text-[11px]
+}
