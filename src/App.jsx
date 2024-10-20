@@ -16,7 +16,7 @@ const router = createBrowserRouter(
   )
 );
 
-// App Component
+
 const App = () => {
   return (
     <RouterProvider router={router} />

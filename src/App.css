@@ -5,3 +5,11 @@
 .fontSize{
   @apply font-Poppins font-semibold  md:text-xs text-[11px]
 }
+.fontS{
+  @apply font-Poppins font-medium  md:text-xs text-[11px]
+}
+
+.liFront{
+  @apply font-Poppins font-medium  md:text-[13px] text-[11px]
+}
+

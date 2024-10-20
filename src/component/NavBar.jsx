@@ -64,9 +64,9 @@ const NavBar = () => {
             {
               searchActive ?
                 (
-                  <span onClick={CloseSearch} className="text-xl cursor-pointer md:block hidden  transition-transform duration-300  "><IoCloseSharp className=' text-blue' /></span>
+                  <span onClick={CloseSearch} className="text-xl cursor-pointer   transition-transform duration-300  "><IoCloseSharp className=' md:text-blue text-white ' /></span>
                 ) : (
-                  <span onClick={CloseSearch} className="text-xl cursor-pointer md:block hidden transition-transform duration-300  "><IoSearch /></span>
+                  <span onClick={CloseSearch} className="text-xl cursor-pointer  transition-transform duration-300  "><IoSearch /></span>
                 )
             }
 
