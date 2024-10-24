@@ -16,9 +16,14 @@ export default {
         'blueLight': '#01A4FF',
 
         'black': '#000000',
+        
         'primary': '#A2A6B0',
+        'F5': '#F5F7FF',
+
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require('daisyui'),
+  ],
 }

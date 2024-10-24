@@ -1,15 +1,46 @@
-.devFlex{
-  @apply flex items-center 
+.devFlex {
+  @apply flex items-center
 }
 
-.fontSize{
-  @apply font-Poppins font-semibold  md:text-xs text-[11px]
-}
-.fontS{
-  @apply font-Poppins font-medium  md:text-xs text-[11px]
+.devFlex-col {
+  @apply flex items-start flex-col
 }
 
-.liFront{
-  @apply font-Poppins font-medium  md:text-[13px] text-[11px]
+.fontSize {
+  @apply font-Poppins font-semibold md:text-xs text-[11px]
+}
+
+.fontS {
+  @apply font-Poppins font-medium md:text-xs text-[11px]
+}
+
+.liFront {
+  @apply font-Poppins md:text-[13px] text-[11px] leading-[1.4em]
+}
+
+.fontLI {
+  @apply font-Poppins font-bold md:text-[14px] text-[11px] leading-[1em] text-primary
+}
+
+.drop-Down-Border {
+  @apply md:border-none border-b border-gray-700
+}
+
+.bttn {
+  width: 312px;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  justify-content: start;
+  padding-bottom: 9px;
+  text-align: center;
+  font-size: 11px;
+  line-height: 1em;
+  font-weight: 700;
+  text-decoration-line: none;
+  text-decoration-line: none;
+  color: white;
+  background-color: #020203;
+
 }
 

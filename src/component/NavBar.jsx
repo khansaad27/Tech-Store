@@ -19,22 +19,24 @@ const NavBar = () => {
   }
 
   return (
-    <nav className='border-b border-primary '>
-      <Container className="devFlex justify-between   md:py-4 py-2 md:px-6 px-3  md:bg-[#FFFFFF]  bg-blue relative" >
-        <div className=" pr-3   ">
-          <FaBars className='block md:hidden  text-white ' />
-        </div>
-        <div className=" md:bg-transparent bg-blue md:static absolute left-4 -top-2 md:rounded-none rounded-t-full -translate-y-1/2">
-          <Image href='/' src={logo} alt="src" className=" hidden md:block w-10 h-10  " />
-          <Image href='/' src={logo2} alt="src" className=" md:hidden block" />
+    <nav className='border-b border-primary md:bg-[#FFFFFF] bg-blue '>
+      <Container className="devFlex justify-between   md:py-4 py-2 md:px-6 px-3     relative" >
+        <div className="">
+          <div className=" pr-3   ">
+            <FaBars className='block md:hidden  text-white ' />
+          </div>
+          <div className=" md:bg-transparent bg-blue md:static absolute left-4 -top-2 md:rounded-none rounded-t-full -translate-y-1/2">
+            <Image href='/' src={logo} alt="src" className=" hidden md:block w-10 h-10  " />
+            <Image href='/' src={logo2} alt="src" className=" md:hidden block" />
+          </div>
         </div>
 
         {
           searchActive ?
             (
-              <div  className="flex-grow md:mx-7  relative  ">
+              <div className="flex-grow md:mx-7  relative  ">
                 <IoSearch className=' cursor-pointer md:text-black text-primary  absolute md:right-7 right-[85%] top-1/2 -translate-y-1/2' />
-                <input type="text"  className=' w-full  md:py-4 py-2 md:px-7 px-11 text-primary text-sm font-Poppins border border-primary rounded-full focus:outline-none' placeholder='Search   here...' />
+                <input type="text" className=' w-full bg-F5  md:py-4 py-2 md:px-7 px-11 text-primary text-sm font-Poppins border border-primary rounded-full focus:outline-none' placeholder='Search   here...' />
               </div>
             ) : (
               <ul className="hidden md:flex space-x-6 py-[15px] font-semibold text-gray-700">
@@ -66,7 +68,7 @@ const NavBar = () => {
                 (
                   <span onClick={CloseSearch} className="text-xl cursor-pointer   transition-transform duration-300  "><IoCloseSharp className=' md:text-blue text-white ' /></span>
                 ) : (
-                  <span onClick={CloseSearch} className="text-xl cursor-pointer  transition-transform duration-300  "><IoSearch /></span>
+                  <span onClick={CloseSearch} className="text-xl cursor-pointer md:text-black  text-white transition-transform duration-300  "><IoSearch /></span>
                 )
             }
 
