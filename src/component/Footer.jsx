@@ -90,7 +90,7 @@ const Footer = () => {
   // /////////////////////////////////////////////////
 
   return (
-    <footer className="bg-black md:block devFlex-col items-center  text-white md:py-12 py-9 px-6" >
+    <footer className="bg-black md:block devFlex-col items-center   text-white md:py-12 py-9 px-6" >
       <Container className='md:block devFlex-col justify-between md:flex-row  gap-y-4 '>
         <div className="text-center md:mb-8">
           <div className=" devFlex  justify-between md:flex-row flex-col gap-y-4 ">
