@@ -3,12 +3,12 @@ import Button from '../layer/Button';
 import Container from '../layer/Container';
 import { RiArrowDropDownLine, RiInstagramFill } from 'react-icons/ri';
 import { AiFillFacebook } from 'react-icons/ai';
-import paypal from '../../public/assets/pay/paypal.svg'
-import visa from '../../public/assets/pay/visa.svg'
-import maestro from '../../public/assets/pay/maestro.svg'
-import discover from '../../public/assets/pay/discover.svg'
-import americanExpress from '../../public/assets/pay/american-express.svg'
-import Image from '../layer/Image'
+import paypal from '../../public/assets/pay/paypal.svg';
+import visa from '../../public/assets/pay/visa.svg';
+import maestro from '../../public/assets/pay/maestro.svg';
+import discover from '../../public/assets/pay/discover.svg';
+import americanExpress from '../../public/assets/pay/american-express.svg';
+import Image from '../layer/Image';
 import CustomLink from '../layer/CustomLink';
 
 
@@ -26,8 +26,6 @@ const Footer = () => {
   const desktopToggle = () => setDesktop((prev) => !prev);
   const laptopsToggle = () => setLaptops((prev) => !prev);
   const addressToggle = () => setAddress((prev) => !prev);
-
-
 
   // //////////////////////////////////////////////////
   const [dropdownTitle] = useState("Information ");
@@ -88,7 +86,14 @@ const Footer = () => {
     { text: "Saturday: 11:00 AM – 5:00 PM" },
   ];
   // /////////////////////////////////////////////////
-
+  const paymentLogos = [
+    { src: paypal, alt: 'Paypal' },
+    { src: visa, alt: 'Visa' },
+    { src: maestro, alt: 'Maestro' },
+    { src: discover, alt: 'Discover' },
+    { src: americanExpress, alt: 'American Express' },
+  ];
+  // ////////////////////////////////////////////////
   return (
     <footer className="bg-black md:block devFlex-col items-center   text-white md:py-12 py-9 px-6" >
       <Container className='md:block devFlex-col justify-between md:flex-row  gap-y-4 '>
@@ -102,16 +107,14 @@ const Footer = () => {
               <input
                 type="email"
                 placeholder="Your Email"
-                className="px-4 py-2  md:w-80 w-[178px] rounded-md font-Poppins font-light text-sm  leading-5 bg-black  border border-gray-600 text-white "
+                className="px-4 py-2  md:w-80 w-[178px] rounded-md font-Poppins font-light text-sm  leading-5 bg-black border border-gray-600 text-white "
               />
-              <Button className=" px-6 py-2 font-Poppins  rounded-full ">
+              <Button url='/' className=" px-6 py-2 font-Poppins  rounded-full ">
                 Subscribe
               </Button>
             </div>
           </div>
         </div>
-
-
         <div className=' flex flex-col ' >
           <div className="md:grid grid-cols-5 devFlex-col gap-y-4  text-sm text-gray-300">
             <div className='1 drop-Down-Border  '>
@@ -119,8 +122,8 @@ const Footer = () => {
                 <h3 className="fontLI mb-4 ">{dropdownTitle}   </h3>
                 <ul className='liFront'>
                   {dropdownLinks.map((link, index) => (
-                    <li  key={index}><a href={link.href} className="hoverCont">{link.text}</a></li>
-                  ))} 
+                    <li key={index}><a href={link.href} className="hoverCont">{link.text}</a></li>
+                  ))}
                 </ul>
               </div>
               <details className="dropdown dropdownClass md:hidden block" onToggle={handleToggle}>
@@ -130,11 +133,11 @@ const Footer = () => {
                 </summary>
                 <ul className=" devFlex-col gap-y-2 mb-3 pl-2  bg-black text-white border-none  w-full  z-[1]">
                   {dropdownLinks.map((link, index) => (
-                    <li key={index}><a  className="hoverCont" href={link.href}>{link.text}</a></li>
+                    <li key={index}><a className="hoverCont" href={link.href}>{link.text}</a></li>
                   ))}
                 </ul>
               </details>
-              
+
             </div>
             <div className='2 drop-Down-Border'>
               <div className="md:block hidden">
@@ -152,7 +155,7 @@ const Footer = () => {
                 </summary>
                 <ul className="devFlex-col gap-y-2 mb-3 pl-2  bg-black text-white border-none  w-full  z-[1]">
                   {dropdownLinks2.map((link, index) => (
-                    <li key={index}><a  className="hoverCont"  href={link.href}>{link.text}</a></li>
+                    <li key={index}><a className="hoverCont" href={link.href}>{link.text}</a></li>
                   ))}
                 </ul>
               </details>
@@ -162,7 +165,7 @@ const Footer = () => {
                 <h3 className="fontLI mb-4">{dropdownTitle3}</h3>
                 <ul className='liFront'>
                   {dropdownLinks3.map((link, index) => (
-                    <li  key={index}><a   href={link.href} className="hoverCont ">{link.text}</a></li>
+                    <li key={index}><a href={link.href} className="hoverCont ">{link.text}</a></li>
                   ))}
                 </ul>
               </div>
@@ -173,7 +176,7 @@ const Footer = () => {
                 </summary>
                 <ul className="devFlex-col gap-y-2 mb-3 pl-2  bg-black text-white border-none  w-full  z-[1]">
                   {dropdownLinks3.map((link, index) => (
-                    <li  key={index}><a   className="hoverCont" href={link.href}>{link.text}</a></li>
+                    <li key={index}><a className="hoverCont" href={link.href}>{link.text}</a></li>
                   ))}
                 </ul>
               </details>
@@ -183,7 +186,7 @@ const Footer = () => {
                 <h3 className="fontLI mb-4">{dropdownTitle4}</h3>
                 <ul className='liFront'>
                   {dropdownLinks4.map((link, index) => (
-                    <li key={index}><a   href={link.href} className="hoverCont">{link.text}</a></li>
+                    <li key={index}><a href={link.href} className="hoverCont">{link.text}</a></li>
                   ))}
                 </ul>
               </div>
@@ -194,7 +197,7 @@ const Footer = () => {
                 </summary>
                 <ul className="devFlex-col gap-y-2 mb-3 pl-2  bg-black text-white border-none  w-full  z-[1]">
                   {dropdownLinks4.map((link, index) => (
-                    <li key={index}><a  className="hoverCont" href={link.href}>{link.text}</a></li>
+                    <li key={index}><a className="hoverCont" href={link.href}>{link.text}</a></li>
                   ))}
                 </ul>
               </details>
@@ -206,18 +209,18 @@ const Footer = () => {
                   <address>
                     <div className="flex flex-wrap items-start ">
                       {dropdownLinks5.map((link, index) => (
-                        <p  className='liFront' key={index}> Address: <a className="hoverCont"  href={link.href}>{link.text}</a></p>
+                        <p className='liFront' key={index}> Address: <a className="hoverCont" href={link.href}>{link.text}</a></p>
                       ))}
                     </div>
                     <CustomLink className='text-blueLight' label="Phones" type="phone" href="+0012345678" />
                     <div className="flex flex-wrap items-start">
                       {dropdownLinks5A.map((link, index) => (
-                        <p className='liFront'   key={index}> We are open: <a className="hoverCont"  href={link.href}>{link.text}</a></p>
+                        <p className='liFront' key={index}> We are open: <a className="hoverCont" href={link.href}>{link.text}</a></p>
                       ))}
                     </div>
                     <ul className="whitespace-wrap " >
                       {dropdownLinks5AA.map((link, index) => (
-                        <li  key={index}><a className="hoverCont" href={link.href}>{link.text}</a></li>
+                        <li key={index}><a className="hoverCont" href={link.href}>{link.text}</a></li>
                       ))}
                     </ul>
                     <CustomLink className='text-blueLight ' label="E-mail" type="email" href="shop@email.com" />
@@ -233,18 +236,18 @@ const Footer = () => {
                   <address className='devFlex-col gap-y-1'>
                     <div className="flex flex-wrap items-start">
                       {dropdownLinks5.map((link, index) => (
-                        <p  key={index}><a  className="hoverCont" href={link.href}>{link.text}</a></p>
+                        <p key={index}><a className="hoverCont" href={link.href}>{link.text}</a></p>
                       ))}
                     </div>
                     <CustomLink className='text-blueLight' label="Phones" type="phone" href="+0012345678" />
                     <div className="flex flex-wrap items-start">
                       {dropdownLinks5A.map((link, index) => (
-                        <p  key={index}><a  className="hoverCont" href={link.href}>{link.text}</a></p>
+                        <p key={index}><a className="hoverCont" href={link.href}>{link.text}</a></p>
                       ))}
                     </div>
                     <ul className="whitespace-wrap " >
                       {dropdownLinks5AA.map((link, index) => (
-                        <li key={index}><a   className="hoverCont" href={link.href}>{link.text}</a></li>
+                        <li key={index}><a className="hoverCont" href={link.href}>{link.text}</a></li>
                       ))}
                     </ul>
                     <CustomLink className='text-blueLight liFront' label="E-mail" type="email" href="shop@email.com" />
@@ -252,12 +255,8 @@ const Footer = () => {
                 </div>
               </details>
             </div>
-
-
           </div>
         </div>
-
-
         <div className=" devFlex-col items-center gap-y-4 md:mt-9  md:border-t border-gray-700">
           <div className=" md:mt-8 devFlex justify-between md:gap-0 gap-[115px]  w-full">
             <div className="flex gap-[0.6875em]  ">
@@ -265,11 +264,9 @@ const Footer = () => {
               <a href="/" className="text-primary"><RiInstagramFill /></a>
             </div>
             <div className="md:flex gap-[0.625em]  hidden  ">
-              <Image href='/' src={paypal} alt='src' />
-              <Image href='/' src={visa} alt='src' />
-              <Image href='/' src={maestro} alt='src' />
-              <Image href='/' src={discover} alt='src' />
-              <Image href='/' src={americanExpress} alt='src' />
+              {paymentLogos.map((logo, index) => (
+                <Image key={index} href="/" src={logo.src} alt={logo.alt} className="w-12 h-auto" />
+              ))}
             </div>
             <div className=" fontS text-gray-400 text-[10px] leading-[1.32em] ">
               <p>Copyright © 2020 Shop Pty. Ltd.</p>
@@ -277,11 +274,9 @@ const Footer = () => {
           </div>
           <div>
             <div className="flex gap-[0.625em] md:hidden ">
-              <Image href='/' src={paypal} alt='src' />
-              <Image href='/' src={visa} alt='src' />
-              <Image href='/' src={maestro} alt='src' />
-              <Image href='/' src={discover} alt='src' />
-              <Image href='/' src={americanExpress} alt='src' />
+              {paymentLogos.map((logo, index) => (
+                <Image key={index} href="/" src={logo.src} alt={logo.alt} className="w-12 h-auto" />
+              ))}
             </div>
           </div>
         </div>

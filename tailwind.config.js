@@ -14,11 +14,12 @@ export default {
       colors: {
         'blue': '#0156FF',
         'blueLight': '#01A4FF',
-
         'black': '#000000',
-        
         'primary': '#A2A6B0',
         'F5': '#F5F7FF',
+        'color-5': '#A2A6B0',
+        'color-6': '#CACDD8',
+
 
       },
     },

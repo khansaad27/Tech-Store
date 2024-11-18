@@ -47,4 +47,15 @@
   
 
 }
-
+.section-email{
+  @apply pl-5  pt-1 
+}
+.section-phones{
+  @apply pl-5  pt-3
+}
+.section-address{
+  @apply ml-5  py-3 max-w-[230px]
+}
+.section-open-hours{
+  @apply pl-5  pb-4
+}
