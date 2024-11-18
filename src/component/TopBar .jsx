@@ -9,8 +9,8 @@ import ContactInfo from '../layer/ContactInfo';
 const TopBar = () => {
   const [shopDown, setShopDown] = useState(false);
 
-  const toggleShopInfo = () => {
-    setShopDown((prev) => !prev); // Toggle dropdown state
+  const ShopInfo = () => {
+    setShopDown((prev) => !prev); 
   };
 
   return (
@@ -22,7 +22,7 @@ const TopBar = () => {
           <span className="fontSize text-[#ACACAC]">Mon–Thu: </span>
           <span className="fontSize text-[#ffff]">9:00 AM – 5:30 PM</span>
           <IoIosArrowDown
-            onClick={toggleShopInfo}
+            onClick={ShopInfo}
             className="text-white cursor-pointer md:ml-1"
           />
 

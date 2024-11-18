@@ -1,5 +1,5 @@
 import React from "react";
-import { FiClock, FiMapPin } from "react-icons/fi";
+import { FiClock, FiMapPin } from "react-icons/fi"; // Importing only the required icons
 import CustomLink from "./CustomLink";
 
 const ContactInfo = () => {
@@ -19,7 +19,7 @@ const ContactInfo = () => {
     {
       icon: <FiMapPin />,
       title: "Address:",
-      content: "1234 Street Address,  City Address, 1234",
+      content: "1234 Street Address, City Address, 1234",
        
       border: true,
       className: "section-address",
@@ -37,7 +37,7 @@ const ContactInfo = () => {
   ];
 
   return (
-    <div className="max-w-sm mx-auto bg-white rounded-lg py-4 md:px-0 px-full ">
+    <div className="max-w-sm mx-auto bg-white rounded-lg py-4">
       {contactInfo.map((section, index) => (
         <div
           key={index}
