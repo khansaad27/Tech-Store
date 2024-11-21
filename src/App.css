@@ -1,3 +1,4 @@
+
 .devFlex {
   @apply flex items-center
 }
@@ -27,6 +28,9 @@
 }
 .hoverCont{
   @apply liFront   text-primary hover:text-white transition-all duration-300
+}
+.accountDropdown{
+  @apply font-Poppins font-medium md:text-[14px] text-[11px] leading-[1em] text-black
 }
 
 .bttn {

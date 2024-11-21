@@ -7,10 +7,10 @@ import Li from '../layer/Li';
 import Button from '../layer/Button';
 import { IoCloseSharp, IoSearch } from 'react-icons/io5';
 import { FiShoppingCart } from 'react-icons/fi';
-import { RiAccountCircleLine } from 'react-icons/ri';
 import { FaBars } from 'react-icons/fa';
 import { MdOutlineKeyboardArrowLeft, MdOutlineKeyboardArrowRight } from 'react-icons/md';
 import SearchInput from '../layer/SearchInput ';
+import AccountDropdown from '../layer/AccountDropdown';
 
 const NavBar = () => {
   // State for toggling the search bar
@@ -39,21 +39,20 @@ const NavBar = () => {
     { href: "/all-products", label: "All Other Products" },
     { href: "/repairs", label: "Repairs" },
   ];
+  /////////////////////////////////////
 
-  return (
+   return (
     <nav className="border-b border-primary md:bg-[#FFFFFF] bg-blue">
-      <Container className="devFlex justify-between md:py-4 py-2 md:px-6 px-3 relative">
+      <Container className="devFlex  justify-between  md:py-4 py-2 md:px-6 px-3 relative">
         {/* Left Section: Logo and Mobile Menu Button */}
-        <div>
+        <div className='  '>
           {/* Mobile Menu Button */}
           <div className="pr-3 cursor-pointer">
             <FaBars onClick={barClick} className="block md:hidden text-white" />
           </div>
-
-          {/* Logo Section */}
-          <div className="md:bg-transparent bg-blue md:static absolute left-4 -top-2 md:rounded-none rounded-t-full -translate-y-1/2">
-            {/* Logo for Desktop View */}
-            <Image href="/" src={logo} alt="Logo" className="hidden md:block w-10 h-10" />
+          {/* Logo for Desktop View */}
+          <Image href="/" src={logo} alt="Logo" className="hidden md:block w-10 " />
+          <div className="md:bg-transparent  bg-blue absolute  left-4   -top-2  rounded-t-full -translate-y-1/2">
             {/* Logo for Mobile View */}
             <Image href="/" src={logo2} alt="Logo" className="md:hidden block" />
           </div>
@@ -70,7 +69,7 @@ const NavBar = () => {
               <Li
                 key={item.href}
                 href={item.href}
-                className={item.href === "/laptops" ? "text-blue" : ""}
+                className={item.href === "/" ? "text-blue " : " hover:bg-black hover:px-4  hover:py-2  rounded-full"}
               >
                 {item.label}
               </Li>
@@ -110,9 +109,8 @@ const NavBar = () => {
             </span>
 
             {/* Account Icon */}
-            <span className="text-[30px] md:text-black text-white cursor-pointer">
-              <RiAccountCircleLine />
-            </span>
+            <AccountDropdown/>
+            
           </div>
         </div>
 

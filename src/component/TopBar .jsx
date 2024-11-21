@@ -9,7 +9,7 @@ import ContactInfo from '../layer/ContactInfo';
 const TopBar = () => {
   const [shopDown, setShopDown] = useState(false);
 
-  const ShopInfo = () => {
+  const shopInfoDropdown = () => {
     setShopDown((prev) => !prev); 
   };
 
@@ -22,10 +22,9 @@ const TopBar = () => {
           <span className="fontSize text-[#ACACAC]">Mon–Thu: </span>
           <span className="fontSize text-[#ffff]">9:00 AM – 5:30 PM</span>
           <IoIosArrowDown
-            onClick={ShopInfo}
+            onClick={shopInfoDropdown}
             className="text-white cursor-pointer md:ml-1"
           />
-
           {/* Dropdown Content */}
           {shopDown && (
             <div className="absolute top-full md:left-[70%] -left-[35%]  mt-2 bg-white shadow-lg rounded-lg z-20  ">
@@ -40,7 +39,7 @@ const TopBar = () => {
             Visit our showroom in 1234 Street Address City, 1234
           </p>
           <span className="underline fontSize text-[#ffff]">
-            <Link to="/contact">Contact Us</Link>
+            <Link to="/">Contact Us</Link>
           </span>
         </div>
 

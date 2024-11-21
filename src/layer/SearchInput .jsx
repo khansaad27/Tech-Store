@@ -24,7 +24,7 @@ const SearchInput = () => {
       <IoSearch className="cursor-pointer md:text-black text-primary absolute md:right-7 right-[85%] top-1/2 -translate-y-1/2" />
       <input
         type="text"
-        className="w-full bg-F5 md:py-4 py-2 md:px-7 px-11 text-primary text-sm font-Poppins border border-primary rounded-full focus:outline-none"
+        className="w-full bg-F5 md:py-4 py-2 md:px-7 px-10 text-primary text-sm font-Poppins border border-primary rounded-full focus:outline-none"
         placeholder={placeholderText}
       />
     </div>
