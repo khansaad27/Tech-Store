@@ -24,7 +24,7 @@ function NextArrow(props) {
         transform: "translateY(-50%)",
         cursor: "pointer",
         zIndex: 1,
-        width: "36px", // Ensure consistent size
+        width: "36px", 
         height: "48px",
       }}
     >
@@ -50,7 +50,7 @@ function PrevArrow(props) {
       transform: "translateY(-50%)",
       cursor: "pointer",
       zIndex: 1,
-      width: "36px", // Consistent size
+      width: "36px", 
       height: "48px",
       }}
     >
