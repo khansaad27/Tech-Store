@@ -1,7 +1,8 @@
 import React from 'react'
 import Container from '../layer/Container'
 import SimpleSlider from '../layer/SimpleSlider'
-import ProductDetails from '../component/Productdetails'
+import ProductDetails from '../component/ProductDetails'
+
 
 
 
