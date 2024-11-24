@@ -2,7 +2,7 @@ import React from 'react'
 import ProductList from '../layer/ProductCard/ProductList ';
 
 
-const ProductDetails = () => {
+const ProductDetail = () => {
   const products = [
     {
       id: 1,
@@ -104,4 +104,4 @@ const ProductDetails = () => {
   );
 };
 
-export default ProductDetails
+export default ProductDetail

@@ -1,7 +1,8 @@
 import React from 'react'
 import Container from '../layer/Container'
 import SimpleSlider from '../layer/SimpleSlider'
-import ProductDetails from '../component/ProductDetails'
+import ProductDetail from '../component/ProductDetail'
+
 
 
 
@@ -10,10 +11,10 @@ const Home = () => {
   return (
     <div>
       <Container>
-       <SimpleSlider/> 
-       <ProductDetails/>   
+        <SimpleSlider />
+        <ProductDetail />
       </Container>
-  
+
     </div>
   )
 }
