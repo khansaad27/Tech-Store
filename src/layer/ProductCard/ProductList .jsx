@@ -43,9 +43,9 @@ const ProductList = ({ products }) => {
     prevArrow: <PrevArrow />,
     responsive: [
       { breakpoint: 1200, settings: { slidesToShow: 5 } },
-
+      { breakpoint: 992, settings: { slidesToShow: 4 } },
       { breakpoint: 768, settings: { slidesToShow: 3 } },
-
+      { breakpoint: 576, settings: { slidesToShow: 2 } },
       { breakpoint: 480, settings: { slidesToShow: 1 } },
     ],
   };
@@ -66,9 +66,9 @@ const ProductList = ({ products }) => {
 
       {!showAll ? (
         <div className="relative w-full overflow-hidden    ">
-          <Slider {...settings}  className=" product-slider ">
+          <Slider {...settings} className=" product-slider ">
             {products.map((product) => (
-              <div key={product.id}  className="px-2"  > 
+              <div key={product.id} className="px-2"  >
                 <ProductCard {...product} />
               </div>
             ))}
