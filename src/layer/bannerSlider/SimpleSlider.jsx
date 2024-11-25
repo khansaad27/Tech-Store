@@ -3,9 +3,9 @@ import "slick-carousel/slick/slick-theme.css";
 
 import React from 'react';
 import Slider from "react-slick";
-import Image from '../layer/Image';
+import Image from '../Image';
 import { MdOutlineKeyboardArrowLeft, MdOutlineKeyboardArrowRight } from "react-icons/md";
-import oneSlider from '../../public/assets/slider/slider.svg';
+import oneSlider from '../../../public/assets/slider/slider.svg';
 
 // Custom Next Arrow
 function NextArrow(props) {

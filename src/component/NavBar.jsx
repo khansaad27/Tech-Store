@@ -4,6 +4,7 @@ import logo from '../../public/assets/logo/1.svg';
 import logo2 from '../../public/assets/logo/Logo.svg';
 import Container from '../layer/Container';
 import Li from '../layer/Li';
+import { NavLink } from 'react-router-dom';
 import Button from '../layer/Button';
 import { IoCloseSharp, IoSearch } from 'react-icons/io5';
 import { FiShoppingCart } from 'react-icons/fi';
@@ -19,6 +20,7 @@ const NavBar = () => {
   // State for toggling the dropdown menu (mobile view)
   const [dropDown, setDropDown] = useState(false);
 
+
   // Toggle the search bar's visibility
   const CloseSearch = () => {
     setSearchActive((prev) => !prev);
@@ -31,8 +33,8 @@ const NavBar = () => {
 
   // Array of navigation menu items
   const menuItems = [
-    { href: "/laptops", label: "Laptops" },
-    { href: "/desktops", label: "Desktop PCs" },
+    { href: "/hello", label: "Laptops" },
+    { href: "/bng", label: "Desktop PCs" },
     { href: "/networking-devices", label: "Networking Devices" },
     { href: "/printers", label: "Printers & Scanners" },
     { href: "/pc-parts", label: "PC Parts" },
@@ -41,7 +43,7 @@ const NavBar = () => {
   ];
   /////////////////////////////////////
 
-   return (
+  return (
     <nav className="border-b border-primary md:bg-[#FFFFFF] bg-blue">
       <Container className="devFlex  justify-between  md:py-4 py-2 md:px-6 px-3 relative">
         {/* Left Section: Logo and Mobile Menu Button */}
@@ -61,17 +63,23 @@ const NavBar = () => {
         {/* Search Bar or Menu Items */}
         {searchActive ? (
           // Search Bar (Visible when searchActive is true)
-          <SearchInput/>
+          <SearchInput />
         ) : (
           // Navigation Links (Visible on Desktop view when searchActive is false)
           <ul className="md:flex hidden space-x-6 py-[15px] font-semibold text-gray-700">
             {menuItems.map((item) => (
               <Li
-                key={item.href}
-                href={item.href}
-                className={item.href === "/" ? "text-blue " : " hover:bg-black hover:px-4  hover:py-2  rounded-full"}
-              >
-                {item.label}
+                key={item.href}>
+                <NavLink
+                  to={item.href} // Use `to` for NavLink
+                  className={({ isActive }) =>
+                    isActive
+                      ? '  text-blue  ' // Active link styling
+                      : ' text-black ' // Default link styling
+                  }
+                >
+                  {item.label}
+                </NavLink>
               </Li>
             ))}
           </ul>
@@ -109,8 +117,8 @@ const NavBar = () => {
             </span>
 
             {/* Account Icon */}
-            <AccountDropdown/>
-            
+            <AccountDropdown />
+
           </div>
         </div>
 

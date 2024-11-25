@@ -2,6 +2,8 @@ import React from 'react'
 import ProductList from '../layer/ProductCard/ProductList ';
 
 
+
+
 const ProductDetail = () => {
   const products = [
     {
@@ -21,7 +23,7 @@ const ProductDetail = () => {
       price: "$499.00",
       stock: "Check availability",
       reviews: 2,
-      image: "/assets/product/p04.svg", 
+      image: "/assets/product/p02.svg", 
       availabilityClass: "text-color-8",
     },
     {
@@ -31,7 +33,7 @@ const ProductDetail = () => {
       price: "$499.00",
       stock: "In stock",
       reviews: 3,
-      image:'/assets/product/p02.svg' ,
+      image:'/assets/product/p03.svg' ,
       availabilityClass: "text-color-9",
     },
     {
@@ -41,7 +43,7 @@ const ProductDetail = () => {
       price: "$499.00",
       stock: "Check availability",
       reviews: 4,
-      image: "/assets/product/p03.svg", 
+      image: "/assets/product/p04.svg", 
       availabilityClass: "text-color-8",
     },
     {
@@ -51,7 +53,7 @@ const ProductDetail = () => {
       price: "$499.00",
       stock: "In stock",
       reviews: 5,
-      image:'/assets/product/p04.svg' ,
+      image:'/assets/product/p05.svg' ,
       availabilityClass: "text-color-9",
     },
     {
@@ -61,7 +63,7 @@ const ProductDetail = () => {
       price: "$499.00",
       stock: "Check availability",
       reviews: 0,
-      image: "/assets/product/p03.svg", 
+      image: "/assets/product/p06.svg", 
       availabilityClass: "text-color-8",
     },
     {
@@ -71,7 +73,7 @@ const ProductDetail = () => {
       price: "$499.00",
       stock: "Check availability",
       reviews: 5,
-      image: "/assets/product/p01.svg", 
+      image: "/assets/product/p07.svg", 
       availabilityClass: "text-color-8",
     },
     {
@@ -81,7 +83,7 @@ const ProductDetail = () => {
       price: "$499.00",
       stock: "Check availability",
       reviews: 3,
-      image: "/assets/product/p02.svg", 
+      image: "/assets/product/p08.svg", 
       availabilityClass: "text-color-8",
     },
     {
@@ -91,7 +93,7 @@ const ProductDetail = () => {
       price: "$499.00",
       stock: "Check availability",
       reviews: 4,
-      image: "/assets/product/p04.svg", 
+      image: "/assets/product/p09.svg", 
       availabilityClass: "text-color-8",
     },
   
@@ -100,6 +102,7 @@ const ProductDetail = () => {
   return (
     <div>
       <ProductList products={products} />
+
     </div>
   );
 };

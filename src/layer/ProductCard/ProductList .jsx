@@ -54,7 +54,7 @@ const ProductList = ({ products }) => {
 
   return (
     <div className="py-8  overflow-hidden">
-      <div className="flex justify-between mb-6">
+      <div className="dev-jus mb-6">
         <h2 className="font-Poppins text-black text-[22px] font-semibold">New Products</h2>
         <Link
           onClick={showAllProducts}
