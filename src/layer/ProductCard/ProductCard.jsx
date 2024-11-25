@@ -13,7 +13,7 @@ const ProductCard = ({
   availabilityClass,
 }) => {
   return (
-    <div className="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-transform transform hover:scale-105 w-full sm:w-64 h-auto">
+    <div className="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-transform transform hover:scale-105 w-full  h-auto  ">
       <div
         className={` ${availabilityClass} mb-2 flex items-center text-sm sm:text-base`}
       >
