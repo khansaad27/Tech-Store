@@ -27,7 +27,7 @@ const CustomBuilds = ({ products = [], isLoading = false }) => {
 
   return (
     <div className="my-5">
-      <div className="flex flex-col sm:flex-row gap-6 p-4">
+      <div className="flex flex-col sm:flex-row gap-6 md:p-0 md:py-4  p-4">
         <div>
           <CustomCard
             onClick={toggleShowAll}

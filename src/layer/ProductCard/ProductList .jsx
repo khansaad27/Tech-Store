@@ -53,7 +53,7 @@ const ProductList = ({ products }) => {
   const showAllProducts = () => setShowAll(!showAll);
 
   return (
-    <div className="py-8 mx-3  overflow-hidden">
+    <div className="py-8 md:mx-0 mx-3  overflow-hidden">
       <div className="dev-jus mb-6">
         <h2 className="font-Poppins text-black text-[22px] font-semibold">New Products</h2>
         <Link
