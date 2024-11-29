@@ -4,7 +4,7 @@ import Image from "../Image";
 
 const ZipBanner = () => {
   return (
-    <div className="   flex items-center  justify-center md:flex-row  flex-col  gap-y-4 bg-color-1 py-5 px-4 my-4 rounded-md shadow-lg">
+    <div className=" m-3  flex items-center  justify-center md:flex-row  flex-col  gap-y-4 bg-color-1 py-5 px-4 my-4 rounded-md shadow-lg">
       <Image
         src="/assets/ZipBanner/zpb.svg"
         alt="Zip Logo"

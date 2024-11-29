@@ -13,7 +13,7 @@ const ProductCard = ({
   availabilityClass,
 }) => {
   return (
-    <div className="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-transform transform hover:scale-105 w-full  h-auto  ">
+    <div className="bg-white p-4 rounded-md shadow-md hover:shadow-md transition-transform transform hover:scale-105 w-full  h-auto  ">
       <div
         className={` ${availabilityClass} mb-2 flex items-center text-sm sm:text-base`}
       >
@@ -30,7 +30,7 @@ const ProductCard = ({
         <Image
           src={image}
           alt={name}
-          className="w-full h-full object-cover rounded-lg"
+          className="w-full h-full object-cover rounded-md"
         />
       </div>
 
