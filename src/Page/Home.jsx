@@ -5,6 +5,8 @@ import ProductDetail from '../component/product/ProductDetail'
 import ZipBanner from '../layer/ZipBanner/ZipBanner'
 import CustomBuildsProductDetail from '../component/product/CustomBuildsProductDetail'
 import MsiLaptopsDetail from '../component/product/MsiLaptopsDetail'
+import DesktopsDetail from '../component/product/DesktopsDetail'
+import GamingMonitorsDetail from '../component/product/GamingMonitorsDetail'
 
 
 
@@ -20,6 +22,8 @@ const Home = () => {
         <ZipBanner />
         <CustomBuildsProductDetail />
         <MsiLaptopsDetail />
+        <DesktopsDetail/>
+        <GamingMonitorsDetail/>
       </Container>
 
     </div>

@@ -1,18 +1,8 @@
 import React, { useState, useEffect } from "react";
 import CustomCard from "../../layer/ProductCard/CustomCard";
 import ProductCard from "../../layer/ProductCard/ProductCard";
-import Tab from "../../layer/Tab";
 
-
-const MsiLaptops = ({ products = [], isLoading = false }) => {
-
-  const tabsWithLinks = [
-    { label: "MSI GS Series", link: "/msi-gs-series" },
-    { label: "MSI GT Series", link: "/msi-gt-series" },
-    { label: "MSI GL Series", link: "/msi-gl-series" },
-    { label: "MSI GE Series", link: "/msi-ge-series" },
-  ];
-  
+const GamingMonitors = ({ products = [], isLoading = false }) => {
   const [showAll, setShowAll] = useState(false);
   const [productsToShow, setProductsToShow] = useState(2); // Default for small screens
 
@@ -34,21 +24,16 @@ const MsiLaptops = ({ products = [], isLoading = false }) => {
 
     return () => window.removeEventListener("resize", updateProductsToShow);
   }, []);
-
-
-
   return (
     <div className="my-5">
-      <div className="p-4">
-      <Tab tabsWithLinks={tabsWithLinks} />
-      </div>
+
       <div className="flex flex-col sm:flex-row gap-6 md:p-0 md:py-4  p-4">
         <div>
           <CustomCard
             onClick={customCardShowAll}
-            title="MSI Laptops"
+            title="Gaming Monitors"
             buttonText={showAll ? "Show Less" : "See All Products"}
-            image="/assets/MSILaptops/msi.svg"
+            image="/assets/GamingMonitors/gm01.svg"
           />
         </div>
         <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-5 gap-6 md:justify-center md:items-center">
@@ -75,4 +60,4 @@ const MsiLaptops = ({ products = [], isLoading = false }) => {
   )
 }
 
-export default MsiLaptops
+export default GamingMonitors

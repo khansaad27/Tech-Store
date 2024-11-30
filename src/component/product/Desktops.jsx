@@ -3,14 +3,12 @@ import CustomCard from "../../layer/ProductCard/CustomCard";
 import ProductCard from "../../layer/ProductCard/ProductCard";
 import Tab from "../../layer/Tab";
 
-
-const MsiLaptops = ({ products = [], isLoading = false }) => {
-
+const Desktops = ({ products = [], isLoading = false }) => {
   const tabsWithLinks = [
-    { label: "MSI GS Series", link: "/msi-gs-series" },
-    { label: "MSI GT Series", link: "/msi-gt-series" },
+    { label: "MSI Infinite Series", link: "/msi-infinite-series" },
+    { label: "MSI Trident", link: "/msi-trident" },
     { label: "MSI GL Series", link: "/msi-gl-series" },
-    { label: "MSI GE Series", link: "/msi-ge-series" },
+    { label: "MSI Nightblade", link: "/msi-nightblade" },
   ];
   
   const [showAll, setShowAll] = useState(false);
@@ -36,7 +34,6 @@ const MsiLaptops = ({ products = [], isLoading = false }) => {
   }, []);
 
 
-
   return (
     <div className="my-5">
       <div className="p-4">
@@ -46,9 +43,9 @@ const MsiLaptops = ({ products = [], isLoading = false }) => {
         <div>
           <CustomCard
             onClick={customCardShowAll}
-            title="MSI Laptops"
+            title="Desktops"
             buttonText={showAll ? "Show Less" : "See All Products"}
-            image="/assets/MSILaptops/msi.svg"
+            image="/assets/Desktops/d01.svg"
           />
         </div>
         <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-5 gap-6 md:justify-center md:items-center">
@@ -75,4 +72,4 @@ const MsiLaptops = ({ products = [], isLoading = false }) => {
   )
 }
 
-export default MsiLaptops
+export default Desktops
