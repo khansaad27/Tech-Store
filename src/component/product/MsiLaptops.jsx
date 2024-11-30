@@ -2,7 +2,8 @@ import React, { useState, useEffect } from "react";
 import CustomCard from "../../layer/ProductCard/CustomCard";
 import ProductCard from "../../layer/ProductCard/ProductCard";
 
-const CustomBuilds = ({ products = [], isLoading = false }) => {
+
+const MsiLaptops = ({ products = [], isLoading = false }) => {
   const [showAll, setShowAll] = useState(false);
   const [productsToShow, setProductsToShow] = useState(2); // Default for small screens
 
@@ -31,9 +32,9 @@ const CustomBuilds = ({ products = [], isLoading = false }) => {
         <div>
           <CustomCard
             onClick={customCardShowAll}
-            title="Custom Builds"
+            title="MSI Laptops"
             buttonText={showAll ? "Show Less" : "See All Products"}
-            image="/assets/CustomeBuilds/p001.svg"
+            image="/assets/MSILaptops/msi.svg"
           />
         </div>
         <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-5 gap-6 md:justify-center md:items-center">
@@ -57,8 +58,7 @@ const CustomBuilds = ({ products = [], isLoading = false }) => {
         </div>
       )}
     </div>
-  );
-};
+  )
+}
 
-export default CustomBuilds;
-
+export default MsiLaptops

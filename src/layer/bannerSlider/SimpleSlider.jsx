@@ -68,6 +68,8 @@ export default function SimpleSlider() {
     slidesToScroll: 1,
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
+    autoplay: true, 
+    autoplaySpeed: 3000,
     customPaging: function (i) {
       return (
         <div className="w-[12px] h-[12px] bg-transparent border-2 border-[#32a877] rounded-full  transition duration-300 ease-in-out"></div>

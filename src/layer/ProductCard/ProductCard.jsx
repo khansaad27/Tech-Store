@@ -3,6 +3,9 @@ import { FaStar, FaRegStar, FaCheck } from "react-icons/fa";
 import { MdCall } from "react-icons/md";
 import Image from "../Image";
 
+
+
+
 const ProductCard = ({
   name,
   price,
@@ -10,19 +13,21 @@ const ProductCard = ({
   stock,
   reviews,
   image,
-  availabilityClass,
 }) => {
+
+
   return (
     <div className="bg-white p-4 rounded-md shadow-md hover:shadow-md transition-transform transform hover:scale-105 w-full  h-auto  ">
       <div
-        className={` ${availabilityClass} mb-2 flex items-center text-sm sm:text-base`}
+        className={`${stock === "In stock" ? "text-color-9" : "text-color-8"
+          } mb-2 flex items-center text-sm sm:text-base`}
       >
         {stock === "In stock" ? (
           <FaCheck className="bg-color-9 text-white border border-color-9 rounded-full mr-1" />
         ) : (
           <MdCall className="bg-color-8 text-white border border-color-8 rounded-full mr-1" />
         )}
-        <p>{stock}</p>
+        <p  >{stock}</p>
       </div>
 
       {/* Image container */}

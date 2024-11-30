@@ -1,9 +1,7 @@
 import React from 'react'
-import ProductList from '../../layer/ProductCard/ProductList ';
+import MsiLaptops from '../product/MsiLaptops'
 
-
-
-const ProductDetail = () => {
+const MsiLaptopsDetail = () => {
   const products = [
     {
       id: 1,
@@ -12,7 +10,7 @@ const ProductDetail = () => {
       price: "$499.00",
       stock: "In stock",
       reviews: 1,
-      image: '/assets/product/p01.svg',
+      image: '/assets/CustomeBuilds/cbp01.svg',
     },
     {
       id: 2,
@@ -21,7 +19,7 @@ const ProductDetail = () => {
       price: "$499.00",
       stock: "Check availability",
       reviews: 2,
-      image: "/assets/product/p02.svg",
+      image: "/assets/CustomeBuilds/cbp02.svg",
     },
     {
       id: 3,
@@ -30,7 +28,7 @@ const ProductDetail = () => {
       price: "$499.00",
       stock: "In stock",
       reviews: 3,
-      image: '/assets/product/p03.svg',
+      image: '/assets/CustomeBuilds/cbp03.svg',
     },
     {
       id: 4,
@@ -39,7 +37,7 @@ const ProductDetail = () => {
       price: "$499.00",
       stock: "Check availability",
       reviews: 4,
-      image: "/assets/product/p04.svg",
+      image: "/assets/CustomeBuilds/cbp04.svg",
     },
     {
       id: 5,
@@ -48,14 +46,14 @@ const ProductDetail = () => {
       price: "$499.00",
       stock: "In stock",
       reviews: 5,
-      image: '/assets/product/p05.svg',
+      image: '/assets/CustomeBuilds/cbp05.svg',
     },
     {
       id: 6,
       name: "EX DISPLAY: MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...",
       originalPrice: "$599.00",
       price: "$499.00",
-      stock: "Check availability",
+      stock: "In stock",
       reviews: 0,
       image: "/assets/product/p06.svg",
     },
@@ -64,15 +62,16 @@ const ProductDetail = () => {
       name: "EX DISPLAY: MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...",
       originalPrice: "$599.00",
       price: "$499.00",
-      stock: "Check availability",
+      stock: "In stock",
       reviews: 5,
+      image: "/assets/product/p07.svg",
     },
     {
       id: 8,
       name: "EX DISPLAY: MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...",
       originalPrice: "$599.00",
       price: "$499.00",
-      stock: "Check availability",
+      stock: "In stock",
       reviews: 3,
       image: "/assets/product/p08.svg",
     },
@@ -81,7 +80,7 @@ const ProductDetail = () => {
       name: "EX DISPLAY: MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...",
       originalPrice: "$599.00",
       price: "$499.00",
-      stock: "Check availability",
+      stock: "In stock",
       reviews: 4,
       image: "/assets/product/p09.svg",
     },
@@ -90,20 +89,17 @@ const ProductDetail = () => {
       name: "EX DISPLAY: MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...",
       originalPrice: "$599.00",
       price: "$499.00",
-      stock: "Check availability",
+      stock: "In stock",
       reviews: 4,
       image: "/assets/product/p04.svg",
     },
 
   ];
-
   return (
     <div>
-
-      <ProductList products={products} />
-  
+      <MsiLaptops products={products} />
     </div>
-  );
-};
+  )
+}
 
-export default ProductDetail
+export default MsiLaptopsDetail

@@ -1,6 +1,7 @@
 import React from "react";
 import CustomBuild from '../../component/product/CustomeBuilds'
 
+
 const CustomBuildsProductDetail = () => {
   const products = [
     {
@@ -10,8 +11,7 @@ const CustomBuildsProductDetail = () => {
       price: "$499.00",
       stock: "In stock",
       reviews: 1,
-      image: '/assets/product/p01.svg',
-      availabilityClass: "text-color-9",
+      image: '/assets/CustomeBuilds/cbp01.svg',
     },
     {
       id: 2,
@@ -20,8 +20,7 @@ const CustomBuildsProductDetail = () => {
       price: "$499.00",
       stock: "Check availability",
       reviews: 2,
-      image: "/assets/product/p02.svg",
-      availabilityClass: "text-color-8",
+      image: "/assets/CustomeBuilds/cbp02.svg",
     },
     {
       id: 3,
@@ -30,8 +29,7 @@ const CustomBuildsProductDetail = () => {
       price: "$499.00",
       stock: "In stock",
       reviews: 3,
-      image: '/assets/product/p03.svg',
-      availabilityClass: "text-color-9",
+      image: '/assets/CustomeBuilds/cbp03.svg',
     },
     {
       id: 4,
@@ -40,8 +38,7 @@ const CustomBuildsProductDetail = () => {
       price: "$499.00",
       stock: "Check availability",
       reviews: 4,
-      image: "/assets/product/p04.svg",
-      availabilityClass: "text-color-8",
+      image: "/assets/CustomeBuilds/cbp04.svg",
     },
     {
       id: 5,
@@ -50,58 +47,52 @@ const CustomBuildsProductDetail = () => {
       price: "$499.00",
       stock: "In stock",
       reviews: 5,
-      image: '/assets/product/p05.svg',
-      availabilityClass: "text-color-9",
+      image: '/assets/CustomeBuilds/cbp05.svg',
     },
     {
       id: 6,
       name: "EX DISPLAY: MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...",
       originalPrice: "$599.00",
       price: "$499.00",
-      stock: "Check availability",
+      stock: "In stock",
       reviews: 0,
       image: "/assets/product/p06.svg",
-      availabilityClass: "text-color-8",
     },
     {
       id: 7,
       name: "EX DISPLAY: MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...",
       originalPrice: "$599.00",
       price: "$499.00",
-      stock: "Check availability",
+      stock: "In stock",
       reviews: 5,
       image: "/assets/product/p07.svg",
-      availabilityClass: "text-color-8",
     },
     {
       id: 8,
       name: "EX DISPLAY: MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...",
       originalPrice: "$599.00",
       price: "$499.00",
-      stock: "Check availability",
+      stock: "In stock",
       reviews: 3,
       image: "/assets/product/p08.svg",
-      availabilityClass: "text-color-8",
     },
     {
       id: 9,
       name: "EX DISPLAY: MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...",
       originalPrice: "$599.00",
       price: "$499.00",
-      stock: "Check availability",
+      stock: "In stock",
       reviews: 4,
       image: "/assets/product/p09.svg",
-      availabilityClass: "text-color-8",
     },
     {
       id: 10,
       name: "EX DISPLAY: MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...",
       originalPrice: "$599.00",
       price: "$499.00",
-      stock: "Check availability",
+      stock: "In stock",
       reviews: 4,
       image: "/assets/product/p04.svg",
-      availabilityClass: "text-color-8",
     },
 
   ];
