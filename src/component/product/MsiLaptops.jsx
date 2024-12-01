@@ -18,7 +18,7 @@ const MsiLaptops = ({ products = [], isLoading = false }) => {
 
   const customCardShowAll = () => setShowAll((prevState) => !prevState);
 
-  // Adjust the number of products to display based on screen size
+
   useEffect(() => {
     const updateProductsToShow = () => {
       if (window.innerWidth >= 768) {
@@ -39,7 +39,7 @@ const MsiLaptops = ({ products = [], isLoading = false }) => {
 
   return (
     <div className="my-5">
-      <div className="p-4">
+      <div className="md:pl-0 pl-4">
       <Tab tabsWithLinks={tabsWithLinks} />
       </div>
       <div className="flex flex-col sm:flex-row gap-6 md:p-0 md:py-4  p-4">

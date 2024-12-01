@@ -5,10 +5,8 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-
     fontFamily: {
       'Poppins': ['Poppins', 'serif'],
-      // font-family: "Poppins", serif;
     },
     extend: {
       colors: {
@@ -23,8 +21,15 @@ export default {
         'color-8': '#C94D3F',
         'color-9': '#78A962',
         'color-10': '#666666',
-
-
+      },
+      keyframes: {
+        scroll: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-100%)' },
+        },
+      },
+      animation: {
+        scroll: 'scroll 40s linear infinite',
       },
     },
   },

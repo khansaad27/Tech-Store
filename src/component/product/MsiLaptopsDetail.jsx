@@ -10,7 +10,7 @@ const MsiLaptopsDetail = () => {
       price: "$499.00",
       stock: "In stock",
       reviews: 1,
-      image: '/assets/CustomeBuilds/cbp01.svg',
+      image: '/assets/MSILaptops/ml01.svg',
     },
     {
       id: 2,
@@ -19,7 +19,7 @@ const MsiLaptopsDetail = () => {
       price: "$499.00",
       stock: "Check availability",
       reviews: 2,
-      image: "/assets/CustomeBuilds/cbp02.svg",
+      image: "/assets/MSILaptops/ml02.svg",
     },
     {
       id: 3,
@@ -28,7 +28,7 @@ const MsiLaptopsDetail = () => {
       price: "$499.00",
       stock: "In stock",
       reviews: 3,
-      image: '/assets/CustomeBuilds/cbp03.svg',
+      image: '/assets/MSILaptops/ml03.svg',
     },
     {
       id: 4,
@@ -37,7 +37,7 @@ const MsiLaptopsDetail = () => {
       price: "$499.00",
       stock: "Check availability",
       reviews: 4,
-      image: "/assets/CustomeBuilds/cbp04.svg",
+      image: "/assets/MSILaptops/ml04.svg",
     },
     {
       id: 5,
@@ -46,7 +46,7 @@ const MsiLaptopsDetail = () => {
       price: "$499.00",
       stock: "In stock",
       reviews: 5,
-      image: '/assets/CustomeBuilds/cbp05.svg',
+      image: '/assets/MSILaptops/ml05.svg',
     },
     {
       id: 6,
@@ -55,7 +55,7 @@ const MsiLaptopsDetail = () => {
       price: "$499.00",
       stock: "In stock",
       reviews: 0,
-      image: "/assets/product/p06.svg",
+      image: "/assets/MSILaptops/ml06.svg",
     },
     {
       id: 7,

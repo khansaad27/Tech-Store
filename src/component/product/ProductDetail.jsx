@@ -66,6 +66,7 @@ const ProductDetail = () => {
       price: "$499.00",
       stock: "Check availability",
       reviews: 5,
+      image: "/assets/product/p07.svg",
     },
     {
       id: 8,

@@ -8,7 +8,6 @@ const CustomBuilds = ({ products = [], isLoading = false }) => {
 
   const customCardShowAll = () => setShowAll((prevState) => !prevState);
 
-  // Adjust the number of products to display based on screen size
   useEffect(() => {
     const updateProductsToShow = () => {
       if (window.innerWidth >= 768) {

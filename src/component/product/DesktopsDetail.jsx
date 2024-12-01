@@ -10,7 +10,7 @@ const DesktopsDetail = () => {
       price: "$499.00",
       stock: "In stock",
       reviews: 1,
-      image: '/assets/CustomeBuilds/cbp01.svg',
+      image: '/assets/Desktops/d02.svg',
     },
     {
       id: 2,
@@ -19,8 +19,7 @@ const DesktopsDetail = () => {
       price: "$499.00",
       stock: "Check availability",
       reviews: 2,
-      image: "/assets/CustomeBuilds/cbp02.svg",
-    },
+      image: '/assets/Desktops/d03.svg',    },
     {
       id: 3,
       name: "EX DISPLAY: MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...",
@@ -28,8 +27,7 @@ const DesktopsDetail = () => {
       price: "$499.00",
       stock: "In stock",
       reviews: 3,
-      image: '/assets/CustomeBuilds/cbp03.svg',
-    },
+      image: '/assets/Desktops/d04.svg',    },
     {
       id: 4,
       name: "EX DISPLAY: MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...",
@@ -37,8 +35,7 @@ const DesktopsDetail = () => {
       price: "$499.00",
       stock: "Check availability",
       reviews: 4,
-      image: "/assets/CustomeBuilds/cbp04.svg",
-    },
+      image: '/assets/Desktops/d02.svg',    },
     {
       id: 5,
       name: "EX DISPLAY: MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...",
@@ -46,8 +43,7 @@ const DesktopsDetail = () => {
       price: "$499.00",
       stock: "In stock",
       reviews: 5,
-      image: '/assets/CustomeBuilds/cbp05.svg',
-    },
+      image: '/assets/Desktops/d05.svg',    },
     {
       id: 6,
       name: "EX DISPLAY: MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...",
@@ -55,7 +51,7 @@ const DesktopsDetail = () => {
       price: "$499.00",
       stock: "In stock",
       reviews: 0,
-      image: "/assets/product/p06.svg",
+      image: "/assets/Desktops/d05.svg",
     },
     {
       id: 7,
@@ -64,7 +60,7 @@ const DesktopsDetail = () => {
       price: "$499.00",
       stock: "In stock",
       reviews: 5,
-      image: "/assets/product/p07.svg",
+      image: "/assets/Desktops/d02.svg",
     },
     {
       id: 8,
@@ -73,7 +69,7 @@ const DesktopsDetail = () => {
       price: "$499.00",
       stock: "In stock",
       reviews: 3,
-      image: "/assets/product/p08.svg",
+      image: "/assets/Desktops/d03.svg",
     },
     {
       id: 9,
@@ -82,7 +78,7 @@ const DesktopsDetail = () => {
       price: "$499.00",
       stock: "In stock",
       reviews: 4,
-      image: "/assets/product/p09.svg",
+      image: "/assets/Desktops/d02.svg",
     },
     {
       id: 10,
@@ -91,7 +87,7 @@ const DesktopsDetail = () => {
       price: "$499.00",
       stock: "In stock",
       reviews: 4,
-      image: "/assets/product/p04.svg",
+      image: "/assets/Desktops/d03.svg",
     },
 
   ];

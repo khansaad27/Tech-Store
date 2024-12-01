@@ -7,6 +7,7 @@ import CustomBuildsProductDetail from '../component/product/CustomBuildsProductD
 import MsiLaptopsDetail from '../component/product/MsiLaptopsDetail'
 import DesktopsDetail from '../component/product/DesktopsDetail'
 import GamingMonitorsDetail from '../component/product/GamingMonitorsDetail'
+import BrandLogos from '../component/BrandLogos/BrandLogos'
 
 
 
@@ -24,6 +25,7 @@ const Home = () => {
         <MsiLaptopsDetail />
         <DesktopsDetail/>
         <GamingMonitorsDetail/>
+        <BrandLogos/>
       </Container>
 
     </div>

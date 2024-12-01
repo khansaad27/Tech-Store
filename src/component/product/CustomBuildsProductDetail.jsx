@@ -56,7 +56,7 @@ const CustomBuildsProductDetail = () => {
       price: "$499.00",
       stock: "In stock",
       reviews: 0,
-      image: "/assets/product/p06.svg",
+      image: '/assets/CustomeBuilds/cbp03.svg',
     },
     {
       id: 7,
@@ -65,7 +65,7 @@ const CustomBuildsProductDetail = () => {
       price: "$499.00",
       stock: "In stock",
       reviews: 5,
-      image: "/assets/product/p07.svg",
+      image: '/assets/CustomeBuilds/cbp04.svg',
     },
     {
       id: 8,
@@ -74,7 +74,7 @@ const CustomBuildsProductDetail = () => {
       price: "$499.00",
       stock: "In stock",
       reviews: 3,
-      image: "/assets/product/p08.svg",
+      image: '/assets/CustomeBuilds/cbp02.svg',
     },
     {
       id: 9,
@@ -83,7 +83,7 @@ const CustomBuildsProductDetail = () => {
       price: "$499.00",
       stock: "In stock",
       reviews: 4,
-      image: "/assets/product/p09.svg",
+      image: '/assets/CustomeBuilds/cbp05.svg',
     },
     {
       id: 10,
@@ -92,7 +92,7 @@ const CustomBuildsProductDetail = () => {
       price: "$499.00",
       stock: "In stock",
       reviews: 4,
-      image: "/assets/product/p04.svg",
+      image: '/assets/CustomeBuilds/cbp03.svg',
     },
 
   ];

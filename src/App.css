@@ -72,6 +72,58 @@
 .arrow-button-prv {
   @apply bg-[#252931]/50 text-white rounded-r-full p-2 flex items-center justify-center cursor-pointer absolute left-0 top-1/2 transform -translate-y-1/2 z-10 w-9 h-12;
 }
-/* .product-slider .slick-track {
-  gap: 12px;
+
+
+/* .spacing-container {
+  @apply mt-5 mb-5;
+}
+
+
+.flex-layout {
+  @apply flex flex-col gap-6 p-4;
+}
+
+.flex-responsive {
+  @apply sm:flex-row md:p-0 md:py-4;
+}
+
+
+.grid-layout {
+  @apply grid grid-cols-2 gap-6 justify-center items-center;
+}
+
+.grid-layout-responsive {
+  @apply sm:grid-cols-2 md:grid-cols-5;
+}
+
+.grid-expanded-layout {
+  @apply grid grid-cols-2 gap-6;
+}
+
+.grid-expanded-responsive {
+  @apply sm:grid-cols-3 md:grid-cols-6;
+}
+
+
+.text-common {
+  @apply font-semibold text-sm text-black;
+}
+
+
+.tab-container {
+  @apply mb-4;
+}
+
+
+.desktop-grid {
+  @apply grid grid-cols-2 gap-6;
+}
+
+.desktop-grid-responsive {
+  @apply sm:grid-cols-3 md:grid-cols-6;
+}
+
+
+.desktop-custom-card {
+  @apply flex items-center justify-center;
 } */
