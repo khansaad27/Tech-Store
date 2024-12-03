@@ -8,6 +8,7 @@ import MsiLaptopsDetail from '../component/product/MsiLaptopsDetail'
 import DesktopsDetail from '../component/product/DesktopsDetail'
 import GamingMonitorsDetail from '../component/product/GamingMonitorsDetail'
 import BrandLogos from '../component/BrandLogos/BrandLogos'
+import SocialMedia from '../component/SocialMedia/SocialMedia'
 
 
 
@@ -26,6 +27,7 @@ const Home = () => {
         <DesktopsDetail/>
         <GamingMonitorsDetail/>
         <BrandLogos/>
+        <SocialMedia/>
       </Container>
 
     </div>
