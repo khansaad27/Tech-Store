@@ -84,7 +84,7 @@ const SocialMedia = () => {
       <h2 className="text-2xl font-Poppins font-semibold text-black text-[22px] mb-6">
         Follow us on Social Media for News, Offers & More
       </h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-6 gap-6">
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-6">
         {cards.map((card, index) => (
           <div
             key={index}
