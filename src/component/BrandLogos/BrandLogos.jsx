@@ -14,39 +14,58 @@ const BrandLogos = () => {
   ];
 
   return (
-    <div className="py-9 overflow-hidden whitespace-nowrap">
-      <div className="flex animate-scroll gap-4 md:gap-8">
+    <div className="py-9">
+      <div className="grid grid-cols-3 gap-6 md:hidden">
         {logos.map((logo, index) => (
           <Link
             key={index}
+            href={logo.link}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex-shrink-0"
+            className="flex items-center justify-center"
           >
             <Image
-              href={logo.link}
               src={logo.src}
               alt={logo.alt}
-              className="h-8 md:h-12 object-contain"
+              className="h-8 object-contain"
             />
           </Link>
         ))}
+      </div>
+      <div className="hidden md:block overflow-hidden whitespace-nowrap">
+        <div className="flex animate-scroll gap-4 md:gap-8">
+          {logos.map((logo, index) => (
+            <Link
+              key={index}
+              href={logo.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex-shrink-0"
+            >
+              <Image
+                src={logo.src}
+                alt={logo.alt}
+                className="h-12 object-contain"
+              />
+            </Link>
+          ))}
 
-        {logos.map((logo, index) => (
-          <Link
-            key={`duplicate-${index}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex-shrink-0"
-          >
-            <Image
+          {logos.map((logo, index) => (
+            <Link
+              key={`duplicate-${index}`}
               href={logo.link}
-              src={logo.src}
-              alt={logo.alt}
-              className="h-8 md:h-12 object-contain"
-            />
-          </Link>
-        ))}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex-shrink-0"
+            >
+              <Image
+                src={logo.src}
+                alt={logo.alt}
+                className="h-12 object-contain"
+              />
+            </Link>
+          ))}
+        </div>
       </div>
     </div>
   );

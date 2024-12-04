@@ -10,77 +10,60 @@ const SocialMedia = () => {
       date: '01/01/2023',
     },
     {
-      image: '/assets/SocialMedia/in01.svg',
+      image: '/assets/SocialMedia/in02.svg',
       description:
         "If you’ve recently made a desktop PC or laptop purchase, you might want to consider adding peripherals to enhance your home office setup, your gaming rig, or your business workspace...",
       date: '01/01/2023',
     },
     {
-      image: '/assets/SocialMedia/in01.svg',
+      image: '/assets/SocialMedia/im03.svg',
       description:
         "If you’ve recently made a desktop PC or laptop purchase, you might want to consider adding peripherals to enhance your home office setup, your gaming rig, or your business workspace...",
       date: '01/01/2023',
     },
     {
-      image: '/assets/SocialMedia/in01.svg',
+      image: '/assets/SocialMedia/in04.svg',
       description:
         "If you’ve recently made a desktop PC or laptop purchase, you might want to consider adding peripherals to enhance your home office setup, your gaming rig, or your business workspace...",
       date: '01/01/2023',
     },
     {
-      image: '/assets/SocialMedia/in01.svg',
+      image: '/assets/SocialMedia/in05.svg',
       description:
         "If you’ve recently made a desktop PC or laptop purchase, you might want to consider adding peripherals to enhance your home office setup, your gaming rig, or your business workspace...",
       date: '01/01/2023',
     },
     {
-      image: '/assets/SocialMedia/in01.svg',
+      image: '/assets/SocialMedia/in06.svg',
       description:
         "If you’ve recently made a desktop PC or laptop purchase, you might want to consider adding peripherals to enhance your home office setup, your gaming rig, or your business workspace...",
       date: '01/01/2023',
     },
     {
-      image: '/assets/SocialMedia/in01.svg',
+      image: '/assets/SocialMedia/in07.svg',
       description:
         "If you’ve recently made a desktop PC or laptop purchase, you might want to consider adding peripherals to enhance your home office setup, your gaming rig, or your business workspace...",
       date: '01/01/2023',
     },
     {
-      image: '/assets/SocialMedia/in01.svg',
+      image: '/assets/SocialMedia/in08.svg',
       description:
         "If you’ve recently made a desktop PC or laptop purchase, you might want to consider adding peripherals to enhance your home office setup, your gaming rig, or your business workspace...",
       date: '01/01/2023',
     },
     {
-      image: '/assets/SocialMedia/in01.svg',
+      image: '/assets/SocialMedia/in09.svg',
       description:
         "If you’ve recently made a desktop PC or laptop purchase, you might want to consider adding peripherals to enhance your home office setup, your gaming rig, or your business workspace...",
       date: '01/01/2023',
     },
-    {
-      image: '/assets/SocialMedia/in01.svg',
-      description:
-        "If you’ve recently made a desktop PC or laptop purchase, you might want to consider adding peripherals to enhance your home office setup, your gaming rig, or your business workspace...",
-      date: '01/01/2023',
-    },
-    {
-      image: '/assets/SocialMedia/in01.svg',
-      description:
-        "If you’ve recently made a desktop PC or laptop purchase, you might want to consider adding peripherals to enhance your home office setup, your gaming rig, or your business workspace...",
-      date: '01/01/2023',
-    },
-    {
-      image: '/assets/SocialMedia/in01.svg',
-      description:
-        "If you’ve recently made a desktop PC or laptop purchase, you might want to consider adding peripherals to enhance your home office setup, your gaming rig, or your business workspace...",
-      date: '01/01/2023',
-    },
+   
  
    
   ];
 
   return (
-    <div className="py-4 md:pl-0 pl-3">
+    <div className=" hidden md:block py-4 md:pl-0 pl-3">
       <h2 className="text-2xl font-Poppins font-semibold text-black text-[22px] mb-6">
         Follow us on Social Media for News, Offers & More
       </h2>
