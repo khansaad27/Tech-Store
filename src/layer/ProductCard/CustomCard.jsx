@@ -11,7 +11,7 @@ const CustomCard = ({ title, buttonText, image, onClick }) => {
         console.log("CustomCard clicked!");
         if (onClick) onClick();
       }}
-      className="relative md:w-[233px] w-full p-[4.5rem] md:h-[350px] rounded-md shadow-md overflow-hidden hover:shadow-xl hover:scale-105 transition-transform cursor-pointer"
+      className="relative md:w-[233px] w-full p-[4.5rem] md:h-[350px]  rounded-md shadow-md overflow-hidden hover:shadow-xl hover:scale-105 transition-transform cursor-pointer"
       style={{
         backgroundImage: `url(${image})`,
         backgroundSize: "cover",
