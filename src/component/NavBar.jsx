@@ -33,15 +33,24 @@ const NavBar = () => {
 
   // Array of navigation menu items
   const menuItems = [
-    { href: "/hello", label: "Laptops" },
-    { href: "/bng", label: "Desktop PCs" },
+    { href: "/MsiWsSeries", label: "Laptops" },
+    { href: "/", label: "Desktop PCs" },
     { href: "/networking-devices", label: "Networking Devices" },
     { href: "/printers", label: "Printers & Scanners" },
     { href: "/pc-parts", label: "PC Parts" },
     { href: "/all-products", label: "All Other Products" },
     { href: "/repairs", label: "Repairs" },
   ];
+  const buttons = [
+    { url: "/", label: "Our Deals" },
+  ];
   /////////////////////////////////////
+
+  const [iconActive, setIconActive] = useState(null);
+
+  const iconActiveClick = (href) => {
+    setIconActive(href);
+  };
 
   return (
     <nav className="border-b border-primary md:bg-[#FFFFFF] bg-blue">
@@ -71,11 +80,11 @@ const NavBar = () => {
               <Li
                 key={item.href}>
                 <NavLink
-                  to={item.href} // Use `to` for NavLink
+                  to={item.href}
                   className={({ isActive }) =>
                     isActive
-                      ? '  text-blue  ' // Active link styling
-                      : ' text-black ' // Default link styling
+                      ? '  text-blue  '
+                      : ' text-black '
                   }
                 >
                   {item.label}
@@ -88,9 +97,17 @@ const NavBar = () => {
         {/* Right Section: Buttons and Icons */}
         <div className="devFlex space-x-6">
           {/* "Our Deals" Button (Visible on Desktop view) */}
-          {!searchActive && <Button url="/" className="hidden md:block">Our Deals</Button>}
+          {!searchActive
+            &&
+            <div className="flex space-x-4">
+              {buttons.map((button, index) => (
+                <Button key={index} url={button.url}>
+                  {button.label}
+                </Button>
+              ))}
+            </div>
+          }
           <div className="devFlex md:gap-7 gap-2 ml-2">
-            {/* Search Icon (Toggles search bar visibility) */}
             {searchActive ? (
               <span
                 onClick={CloseSearch}
@@ -137,26 +154,38 @@ const NavBar = () => {
             {/* Dropdown Menu Items */}
             <ul className="space-y-2 text-lg font-semibold">
               {menuItems.map((item) => (
-                <Li
-                  key={item.href}
-                  href={item.href}
-                  className="group pt-3 pb-2 hover:bg-[#F5F7FF] hover:pl-[10px] devFlex justify-between transition-all duration-300"
-                >
-                  <span className="devFlex gap-1">
-                    <MdOutlineKeyboardArrowLeft
-                      className="opacity-0 group-hover:opacity-100 text-[#6C757D] transition-all duration-300"
+                <Li key={item.href} className="group pt-3 pb-2">
+                  <NavLink
+                    to={item.href}
+                    onClick={() => iconActiveClick(item.href)}
+                    className={({ isActive }) =>
+                      isActive || iconActive === item.href
+                        ? "group devFlex gap-1 bg-[#F5F7FF] pl-[10px] text-blue font-bold transition-all duration-300"
+                        : "group gap-1 hover:bg-[#F5F7FF] hover:pl-[10px] devFlex justify-between transition-all duration-300"
+                    }
+                  >
+                    <span className="devFlex gap-1">
+                      <MdOutlineKeyboardArrowLeft
+                        className={`${iconActive === item.href ? "opacity-100" : "opacity-0 group-hover:opacity-100"
+                          } text-[#6C757D] transition-all duration-300`}
+                      />
+                      {item.label}
+                    </span>
+                    <MdOutlineKeyboardArrowRight
+                      className={`${iconActive === item.href ? "opacity-0" : "opacity-100 group-hover:opacity-0"
+                        } text-[#6C757D] transition-all`}
                     />
-                    {item.label}
-                  </span>
-                  <MdOutlineKeyboardArrowRight
-                    className="text-[#6C757D] group-hover:opacity-0 transition-all"
-                  />
+                  </NavLink>
                 </Li>
               ))}
             </ul>
-
-            {/* "Our Deals" Button */}
-            <Button url="/" className="self-start !px-14 ml-[10px]">Our Deals</Button>
+            <div className="flex space-x-4">
+              {buttons.map((button, index) => (
+                <Button key={index} url={button.url} className="self-start !px-14 ml-[10px]">
+                  {button.label}
+                </Button>
+              ))}
+            </div>
           </div>
         )}
       </Container>
@@ -165,3 +194,5 @@ const NavBar = () => {
 };
 
 export default NavBar;
+
+

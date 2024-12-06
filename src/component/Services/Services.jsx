@@ -21,7 +21,7 @@ const Services = () => {
   ];
 
   return (
-    <div className="devFlex justify-center  py-14">
+    <div className="devFlex justify-center bg-color-1  py-14">
       <div className="grid grid-cols-1  sm:grid-cols-2  md:grid-cols-3 gap-8 max-w-6xl w-full">
         {services.map((service, index) => (
           <div

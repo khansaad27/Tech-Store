@@ -10,7 +10,7 @@ import GamingMonitorsDetail from '../component/product/GamingMonitorsDetail'
 import BrandLogos from '../component/BrandLogos/BrandLogos'
 import SocialMedia from '../component/SocialMedia/SocialMedia'
 import Testimonial from '../component/Testimonial/Testimonial'
-import Services from '../component/Services/Services'
+
 
 
 
@@ -31,7 +31,7 @@ const Home = () => {
         <BrandLogos/>
         <SocialMedia/>
         <Testimonial/>
-        <Services/>
+        
       </Container>
 
     </div>

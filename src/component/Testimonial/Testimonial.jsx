@@ -24,7 +24,7 @@ const Testimonial = () => {
   ];
 
   return (
-    <div className="flex justify-center mt-11 mx-4p px-3">
+    <div className="flex justify-center my-11  px-3">
       <div className="text-center bg-color-1 shadow-md rounded-lg py-7 md:py-14 px-5 md:px-28">
         <div className="flex items-start md:gap-x-6 gap-x-4">
           <img
