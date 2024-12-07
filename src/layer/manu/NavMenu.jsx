@@ -52,7 +52,7 @@ const NavMenu = () => {
     <div className="relative">
       {/* Menu Button */}
       <button
-        className="bg-blue-500 text-white px-6 py-3 rounded-md"
+        className="bg-blue text-white px-6 py-3 rounded-md"
         onMouseEnter={() => {
           setHoveredCategory(null);
           setHoveredSubCategory(null);
@@ -63,7 +63,7 @@ const NavMenu = () => {
       </button>
 
       {/* Main Dropdown */}
-      <div className="absolute top-12 left-0 w-full bg-white shadow-lg z-10">
+      <div className="absolute top-12 left-0 w-full bg-transparent shadow-lg z-10">
         <div className="flex">
           {/* Level 1: Categories */}
           <div className="w-1/4 p-4 border-r border-gray-300">
@@ -159,4 +159,8 @@ const NavMenu = () => {
 
 export default NavMenu;
 
-
+{/* <div className="App">
+          <header className="p-4">
+            <NavMenu />
+          </header>
+        </div> */}
