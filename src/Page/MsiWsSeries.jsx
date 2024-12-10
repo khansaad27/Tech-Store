@@ -3,6 +3,7 @@ import Container from '../layer/Container'
 import Breadcrumb from '../layer/Breadcrumb'
 import TopBg from '../component/topbg/TopBg'
 import PTopBar from '../layer/productTopBar/PTopBar'
+import Filter from '../layer/Filter/Filter'
 
 
 const MsiWsSeries = () => {
@@ -12,6 +13,7 @@ const MsiWsSeries = () => {
         <TopBg />
         <Breadcrumb />
         <PTopBar/>
+        <Filter/>
       </Container>
     </div>
   )
