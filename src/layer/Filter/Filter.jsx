@@ -1,32 +1,62 @@
 import React, { useState } from "react";
+import Button from "../Button";
+import Image from "../Image";
 
 const Filter = () => {
   const [selectedFilters, setSelectedFilters] = useState(0);
+  const [selectedColor, setSelectedColor] = useState(null);
+  const [selectedCategories, setSelectedCategories] = useState([]);
+  const [selectedPriceRanges, setSelectedPriceRanges] = useState([]);
 
+  // Handle clear filters
   const handleClearFilters = () => {
+    setSelectedCategories([]);
+    setSelectedPriceRanges([]);
+    setSelectedColor(null);
     setSelectedFilters(0);
     document
-      .querySelectorAll("input[type=checkbox]")
-      .forEach((checkbox) => (checkbox.checked = false));
+      .querySelectorAll("input[type=checkbox], input[type=radio]")
+      .forEach((input) => (input.checked = false));
     alert("Filters cleared!");
   };
 
+  // Handle apply filters
   const handleApplyFilters = () => {
+    setSelectedFilters(
+      selectedCategories.length + selectedPriceRanges.length + (selectedColor ? 1 : 0)
+    );
     alert(`Filters Applied (${selectedFilters})`);
   };
 
-  const handleCheckboxChange = (e) => {
-    setSelectedFilters(
-      e.target.checked ? selectedFilters + 1 : selectedFilters - 1
-    );
+
+
+  // Handle color change
+  const handleColorChange = (event) => {
+    setSelectedColor(event.target.id);
   };
 
+  // Handle checkbox changes for categories and price ranges
+  const handleCheckboxChange = (event, type) => {
+    const value = event.target.id;
+    if (type === "category") {
+      setSelectedCategories((prev) =>
+        event.target.checked ? [...prev, value] : prev.filter((item) => item !== value)
+      );
+    } else if (type === "price") {
+      setSelectedPriceRanges((prev) =>
+        event.target.checked ? [...prev, value] : prev.filter((item) => item !== value)
+      );
+    }
+  };
+
+  // Categories data
   const categories = [
     { id: "custom-pcs", label: "CUSTOM PCS", count: 5 },
     { id: "hp-pcs", label: "HP/COMPAQ PCS", count: 15 },
     { id: "msi-pcs", label: "MSI ALL-IN-ONE PCS", count: 45 },
   ];
 
+  // Price ranges data
   const priceRanges = [
     "$0.00 - $100.00 (1)",
     "$100.00 - $200.00 (2)",
@@ -38,133 +68,157 @@ const Filter = () => {
     "$700.00 and Above (8)",
   ];
 
+  // Color data
   const colors = [
-    { id: "color-red", label: "Red", count: 1 },
-    { id: "color-blue", label: "Blue", count: 2 },
-    { id: "color-green", label: "Green", count: 3 },
+    { id: 'red', hex: '#FF0000' },
+    { id: 'blue', hex: '#0000FF' },
+    { id: 'green', hex: '#008000' },
+    { id: 'yellow', hex: '#FFFF00' },
   ];
 
+  // Brands data (with logo URLs)
   const brands = [
-    { id: "brand1", label: "All Brands" },
-    { id: "brand2", label: "MSI" },
-    { id: "brand3", label: "ASUS" },
-    { id: "brand4", label: "GIGABYTE" },
+    { id: "brand2", label: "MSI", logo: "/assets/BrandLogos/ad.svg" },
+    { id: "brand3", label: "ASUS", logo: "/assets/BrandLogos/gi.svg" },
+    { id: "brand4", label: "GIGABYTE", logo: "/assets/BrandLogos/hp.svg" },
+    { id: "brand5", label: "GIGABYTE", logo: "/assets/BrandLogos/msi.svg" },
+    { id: "brand6", label: "GIGABYTE", logo: "/assets/BrandLogos/ra.svg" },
+    { id: "brand7", label: "GIGABYTE", logo: "/assets/BrandLogos/rl.svg" },
   ];
 
   return (
-    <aside className="w-1/4 pr-4">
-      <div className="bg-white p-4 rounded shadow mb-4">
+    <aside className="w-[270px] pr-4">
+      <div className="">
         {/* Header */}
-        <div>
-          <h2 className="text-lg font-bold mb-2">Filters</h2>
-          <button
-            onClick={handleClearFilters}
-            className="bg-blue text-white px-4 py-2 rounded-full mb-4"
-          >
-            Clear Filter
-          </button>
-        </div>
+        <div className="px-4 py-7 mb-4 bg-color-1  shadow-md">
+          <div className="text-center">
+            <h2 className="text-base font-Poppins text-black font-bold mb-2">Filters</h2>
+            <Button
+              onClick={handleClearFilters}
+              className="py-2 px-[61px] border-color-5 text-color-5 rounded-full mb-4"
+            >
+              Clear Filter
+            </Button>
+          </div>
 
-        {/* Category Filter */}
-        <div className="mb-4">
-          <h3 className="font-bold mb-2">Category</h3>
-          <ul>
-            {categories.map((category) => (
-              <li key={category.id}>
-                <input
-                  className="mr-2"
-                  id={category.id}
-                  type="checkbox"
-                  onChange={handleCheckboxChange}
-                />
-                <label htmlFor={category.id}>
-                  {category.label} ({category.count})
-                </label>
-              </li>
-            ))}
-          </ul>
-        </div>
+          {/* Category Filter */}
+          <div className="mb-4">
+            <h3 className="font-semibold font-Poppins text-base text-black mb-2">Category</h3>
+            <ul>
+              {categories.map((category) => (
+                <li className="font-Poppins text-sm leading-[1.70em] text-black" key={category.id}>
+                  <input
+                    className="mr-2 rounded-full"
+                    id={category.id}
+                    type="checkbox"
+                    onChange={(e) => handleCheckboxChange(e, "category")}
+                  />
+                  <label htmlFor={category.id}>
+                    {category.label} ({category.count})
+                  </label>
+                </li>
+              ))}
+            </ul>
+          </div>
 
-        {/* Price Filter */}
-        <div className="mb-4">
-          <h3 className="font-bold mb-2">Price</h3>
-          <ul>
-            {priceRanges.map((price, index) => (
-              <li key={index}>
-                <input
-                  className="mr-2"
-                  id={`price${index + 1}`}
-                  type="checkbox"
-                  onChange={handleCheckboxChange}
-                />
-                <label htmlFor={`price${index + 1}`}>{price}</label>
-              </li>
-            ))}
-          </ul>
-        </div>
+          {/* Price Filter */}
+          <div className="mb-4">
+            <h3 className="font-semibold font-Poppins text-base text-black mb-2">Price</h3>
+            <ul>
+              {priceRanges.map((price, index) => (
+                <li className="font-Poppins text-sm leading-[1.70em] text-black" key={index}>
+                  <input
+                    className="mr-2"
+                    id={`price${index + 1}`}
+                    type="checkbox"
+                    onChange={(e) => handleCheckboxChange(e, "price")}
+                  />
+                  <label htmlFor={`price${index + 1}`}>{price}</label>
+                </li>
+              ))}
+            </ul>
+          </div>
 
-        {/* Color Filter */}
-        <div className="mb-4">
-          <h3 className="font-bold mb-2">Color</h3>
-          <ul>
-            {colors.map((color) => (
-              <li key={color.id}>
-                <input
-                  className="mr-2"
-                  id={color.id}
-                  type="checkbox"
-                  onChange={handleCheckboxChange}
-                />
-                <label htmlFor={color.id}>
-                  {color.label} ({color.count})
-                </label>
-              </li>
-            ))}
-          </ul>
-        </div>
+          {/* Color Filter */}
+          <div className="mb-4">
+            <h3 className="font-semibold font-Poppins text-base text-black mb-2">Color</h3>
+            <ul className="flex gap-2">
+              {colors.map((color) => (
+                <li key={color.id}>
+                  <input
+                    className="hidden"
+                    id={color.id}
+                    type="radio"
+                    name="color"
+                    onChange={handleColorChange}
+                  />
+                  <label
+                    htmlFor={color.id}
+                    className={`block w-5 h-5 rounded-full cursor-pointer transition ${selectedColor === color.id ? 'border-blueLight border-[3px] w-7 h-7' : ''}`}
+                    style={{ backgroundColor: color.hex }}
+                  ></label>
+                </li>
+              ))}
+            </ul>
+          </div>
 
-        {/* Apply Filters */}
-        <div className="mb-4">
-          <h3 className="font-bold mb-2">Filter Name</h3>
-          <button
-            onClick={handleApplyFilters}
-            className="bg-blue text-white px-4 py-2 rounded"
-          >
-            Apply Filters ({selectedFilters})
-          </button>
+          {/* Apply Filters */}
+          <div className="mb-4">
+            <h3 className="font-semibold font-Poppins text-base text-black mb-2">Filter Name</h3>
+            <Button
+              onClick={handleApplyFilters}
+              className="py-2 px-[45px] font-semibold text-sm rounded"
+            >
+              Apply Filters ({selectedFilters})
+            </Button>
+          </div>
         </div>
 
         {/* Brand Filter */}
-        <div className="mb-4">
-          <h3 className="font-bold mb-2">Brands</h3>
-          <select className="w-full border bg-white border-gray-300 rounded-md p-2 text-sm text-gray-600">
-            <option value="">Select a Filter</option>
+        <div className="mb-4 py-7 px-4 bg-color-1  shadow-md">
+          <div className="text-center">
+            <h3 className="font-semibold font-Poppins text-base text-black mb-2">Brands</h3>
+            <Button
+              className="py-2 px-[63px] border-color-5 text-color-5 font-semibold text-sm rounded"
+            >
+              All Brands 
+            </Button>
+          </div>
+          <div className="mt-4 grid grid-cols-2 gap-4">
             {brands.map((brand) => (
-              <option key={brand.id} value={brand.id}>
-                {brand.label}
-              </option>
+              <div
+                key={brand.id}
+                className="flex items-center justify-center p-2 border rounded-md bg-white hover:shadow-lg"
+              >
+                <Image
+                  src={brand.logo}
+                  alt={brand.label}
+                  className="w-full h-auto object-contain"
+                />
+              </div>
             ))}
-          </select>
-          
           </div>
-
-          {/* Advertisement */}
-          <div className="mb-4">
-            <h3 className="font-bold mb-2">Compare Products</h3>
-            <p>You have no items to compare.</p>
-          </div>
-          <div className="mb-4">
-            <h3 className="font-bold mb-2">My Wish List</h3>
-            <p>You have no items in your wish list.</p>
-          </div>
-          <img
-            alt="Advertisement for noblechairs The Icon Series"
-            className="w-full rounded"
-            height="300"
-            src="https://storage.googleapis.com/a1aa/image/699r3p2KQcJ1C1OchY0vP5uvHkAALDRM6ABaMBlhTLJzAYeJA.jpg"
-            width="200"
-          />
         </div>
+
+        {/* Advertisement */}
+        <div className="mb-4 py-7 px-3 bg-color-1 text-center  shadow-md">
+          <h3 className="font-semibold font-Poppins text-base text-black mb-2">Compare Products</h3>
+          <p className="font-Poppins text-sm text-black ">You have no items to compare.</p>
+        </div>
+        <div className="mb-4 py-7 px-4 text-center bg-color-1 shadow-md">
+          <h3 className="font-semibold font-Poppins text-base text-black mb-2">My Wish List</h3>
+          <p className="font-Poppins text-sm text-black">You have no items in your wish list.</p>
+        </div>
+       <div className="mb-4">
+       <Image
+          alt="Advertisement for noblechairs The Icon Series"
+          className="w-full rounded"
+          height="300"
+          src="public/assets/hsd/hs.svg"
+          width="200"
+        />
+       </div>
+      </div>
     </aside>
   );
 };

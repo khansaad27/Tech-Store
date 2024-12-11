@@ -73,7 +73,12 @@
   @apply bg-[#252931]/50 text-white rounded-r-full p-2 flex items-center justify-center cursor-pointer absolute left-0 top-1/2 transform -translate-y-1/2 z-10 w-9 h-12;
 }
 
-
+input:checked + label span svg {
+  display: block; /* Show checkmark */
+}
+label span svg {
+  display: none; /* Hide checkmark */
+}
 /* .spacing-container {
   @apply mt-5 mb-5;
 }
