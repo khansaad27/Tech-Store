@@ -35,7 +35,7 @@ const NavBar = () => {
   const menuItems = [
     { href: "/MsiWsSeries", label: "Laptops" },
     { href: "/", label: "Desktop PCs" },
-    { href: "/networking-devices", label: "Networking Devices" },
+    { href: "/put", label: "Networking Devices" },
     { href: "/printers", label: "Printers & Scanners" },
     { href: "/pc-parts", label: "PC Parts" },
     { href: "/all-products", label: "All Other Products" },

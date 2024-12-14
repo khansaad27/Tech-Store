@@ -12,7 +12,6 @@ const MsiWsSeries = () => {
       <Container>
         <TopBg />
         <Breadcrumb />
-        <PTopBar/>
         <Filter/>
       </Container>
     </div>
