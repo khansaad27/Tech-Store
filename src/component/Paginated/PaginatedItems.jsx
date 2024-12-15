@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import ReactPaginate from 'react-paginate';
-import PaginatProductD from '../PaginatProduct/paginatProductD';
+import PaginatedProductD from '../PaginatProduct/PaginatedProductD';
+
 
 const items = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 141, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 141, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 141, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 141, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 141, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 141, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 141, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 141, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 141, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 141, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 141, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 141, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 141, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 141, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 141, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 141, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 141, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14];
 
@@ -10,7 +11,7 @@ function Items({ currentItems, columns }) {
       {currentItems &&
         currentItems.map((item, index) => (
           <div key={index} className={`col-span-1 ${columns === 1 ? "w-full" : ""}`}>
-            <PaginatProductD />
+            <PaginatedProductD />
           </div>
         ))}
     </>

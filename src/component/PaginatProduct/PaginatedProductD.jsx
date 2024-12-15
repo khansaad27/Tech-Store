@@ -15,7 +15,7 @@ const products = [
 
 ];
 
-const PaginatProductD = () => {
+const PaginatedProductD = () => {
   return (
     <div className="py-8 md:mx-0 mx-3 overflow-hidden">
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-1  gap-4">
@@ -27,4 +27,4 @@ const PaginatProductD = () => {
   );
 };
 
-export default PaginatProductD;
+export default PaginatedProductD;
