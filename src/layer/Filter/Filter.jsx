@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Button from "../Button";
 import Image from "../Image";
-import PaginatedItems from "../../component/Paginated/PaginatedItems";
 import PTopBar from "../productTopBar/PTopBar";
 import { useNavigate } from "react-router-dom";
 
@@ -101,7 +100,6 @@ const Filter = () => {
     < >
 
       <div className="flex  ">
-
         <aside className="w-[270px] mt-4 pr-4">
           <div className="mb-3">
             <button
@@ -271,7 +269,7 @@ const Filter = () => {
           </div>
         </aside>
 
-        <div className="w-[90%]">
+        <div className="w-[90%] ">
           <PTopBar />
         </div>
       </div>

@@ -1,45 +1,43 @@
-import React, { useState } from "react";
-import ReactPaginate from "react-paginate";
-import ProductCard from "../../layer/ProductCard/ProductCard";
+import React, { useEffect, useState } from 'react';
+import ReactPaginate from 'react-paginate';
+import PaginatProductD from '../PaginatProduct/paginatProductD';
 
+const items = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 141, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 141, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 141, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 141, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 141, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 141, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 141, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 141, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 141, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 141, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 141, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 141, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 141, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 141, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 141, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 141, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 141, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14];
 
-const items = Array.from({ length: 50 }, (_, i) => ({
-  id: i + 1,
-  name: `Product ${i + 1}`,
-}));
+function Items({ currentItems, columns }) {
+  return (
+    <>
+      {currentItems &&
+        currentItems.map((item, index) => (
+          <div key={index} className={`col-span-1 ${columns === 1 ? "w-full" : ""}`}>
+            <PaginatProductD />
+          </div>
+        ))}
+    </>
+  );
+}
 
-const PaginatedItems = ({ itemsPerPage, view, columns }) => {
+function PaginatedItems({ itemsPerPage, view, columns }) {
   const [itemOffset, setItemOffset] = useState(0);
 
-  // Calculate the current items and total page count
   const endOffset = itemOffset + itemsPerPage;
   const currentItems = items.slice(itemOffset, endOffset);
   const pageCount = Math.ceil(items.length / itemsPerPage);
 
-  // Handle page change
   const handlePageClick = (event) => {
     const newOffset = (event.selected * itemsPerPage) % items.length;
     setItemOffset(newOffset);
   };
 
+
   return (
     <>
-      {/* Render products dynamically */}
-      <div
-        className={`grid gap-4 ${
-          view === "grid"
-            ? `grid-cols-${columns}`
-            : "grid-cols-1"
-        }`}
-      >
-        {currentItems.map((item) => (
-          <div key={item.id}>
-            <ProductCard product={item} />
-          </div>
-        ))}
+  
+    
+      <div className={`grid grid-cols-${columns} gap-3`}>
+        <Items currentItems={currentItems} columns={columns} />
       </div>
 
-      {/* Pagination controls */}
       <ReactPaginate
         breakLabel={<span className="mx-2 text-primary">...</span>}
         nextLabel={
@@ -66,6 +64,6 @@ const PaginatedItems = ({ itemsPerPage, view, columns }) => {
       />
     </>
   );
-};
+}
 
 export default PaginatedItems;

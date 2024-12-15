@@ -74,11 +74,13 @@
 }
 
 input:checked + label span svg {
-  display: block; /* Show checkmark */
+  display: block;
 }
 label span svg {
-  display: none; /* Hide checkmark */
+  display: none; 
 }
+
+
 /* .spacing-container {
   @apply mt-5 mb-5;
 }
