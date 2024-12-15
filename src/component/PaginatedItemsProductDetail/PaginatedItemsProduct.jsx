@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import ProductCard from '../../layer/ProductCard/ProductCard';
 
 const products = [
@@ -15,7 +14,7 @@ const products = [
 
 ];
 
-const PaginatedProductD = () => {
+const PaginatedItemsProduct = () => {
   return (
     <div className="py-8 md:mx-0 mx-3 overflow-hidden">
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-1  gap-4">
@@ -26,5 +25,4 @@ const PaginatedProductD = () => {
     </div>
   );
 };
-
-export default PaginatedProductD;
+export default PaginatedItemsProduct
