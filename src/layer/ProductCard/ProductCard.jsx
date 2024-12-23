@@ -17,7 +17,7 @@ const ProductCard = ({
 
 
   return (
-    <div className="bg-white p-4 rounded-md shadow-md hover:shadow-md transition-transform transform hover:scale-105 w-full  h-auto  ">
+    <div className="bg-white p-4 rounded-md shadow-md transition-transform transform  w-full  h-auto  ">
       <div
         className={`${stock === "In stock" ? "text-color-9" : "text-color-8"
           } mb-2 flex items-center text-sm sm:text-base`}

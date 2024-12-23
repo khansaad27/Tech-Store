@@ -262,7 +262,7 @@ const Filter = () => {
                 alt="Advertisement for noblechairs The Icon Series"
                 className="w-full rounded"
                 height="300"
-                src="public/assets/hsd/hs.svg"
+                src="/assets/hsd/hs.svg"
                 width="200"
               />
             </div>
