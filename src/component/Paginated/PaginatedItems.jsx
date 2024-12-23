@@ -10,7 +10,7 @@ function Items({ currentItems, columns }) {
     <>
       {currentItems &&
         currentItems.map((item, index) => (
-          <div key={index} className={`col-span-1 ${columns === 1 ? "w-full" : ""}`}>
+          <div key={index} className={`col-span-1 ${columns === 1 ? "w-full " : ""}`}>
             <PaginatedItemsProduct />
           </div>
         ))}
@@ -35,7 +35,7 @@ function PaginatedItems({ itemsPerPage, view, columns }) {
     <>
   
     
-      <div className={`grid grid-cols-${columns} gap-3`}>
+      <div className={`grid grid-cols-${columns} gap-3 `}>
         <Items currentItems={currentItems} columns={columns} />
       </div>
 

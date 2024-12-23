@@ -16,7 +16,7 @@ const products = [
 
 const PaginatedItemsProduct = () => {
   return (
-    <div className="py-8 md:mx-0 mx-3 overflow-hidden">
+    <div className="py-4 md:mx-0 mx-3 ">
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-1  gap-4">
         {products.map((product) => (
           <ProductCard key={product.id} {...product} />

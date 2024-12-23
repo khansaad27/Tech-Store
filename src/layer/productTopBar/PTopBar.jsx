@@ -20,10 +20,10 @@ const PTopBar = ({ className = "" }) => {
 
   const columnView = (viewType) => {
     if (viewType === "grid") {
-      setColumns(5); // Set columns to 5 for grid view
+      setColumns(5); 
       setView("grid");
     } else {
-      setColumns(1); // Set columns to 1 for list view
+      setColumns(1); 
       setView("list");
     }
   };
@@ -31,7 +31,7 @@ const PTopBar = ({ className = "" }) => {
   return (
     <>
       <div className={`mb-10  ${className}`}>
-        <div className="flex flex-wrap items-center justify-between pb-4 border-b border-gray-300 space-y-4 lg:space-y-0">
+        <div className="flex flex-wrap items-center justify-between pb-4 border-b border-gray-300 space-y-4 lg:space-y-0 overflow-hidden">
           <div>
             <span className="font-Poppins text-sm text-primary lg:ml-4">
               Items 1-{itemsPerPage} of 20
@@ -101,7 +101,6 @@ const PTopBar = ({ className = "" }) => {
           </div>
       </div>
 
-      {/* Pass sortOption to PaginatedItems */}
       <div className="PaginatedItems mt-4">
         <PaginatedItems
           itemsPerPage={itemsPerPage}
