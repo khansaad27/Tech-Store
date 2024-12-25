@@ -9,7 +9,7 @@ import Filter from '../layer/Filter/Filter'
 const MsiWsSeries = () => {
   return (
     <div>
-      <Container>
+      <Container >
         <TopBg />
         <Breadcrumb />
         <Filter/>

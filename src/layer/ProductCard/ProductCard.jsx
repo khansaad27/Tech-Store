@@ -1,9 +1,10 @@
 import React from "react";
-import { FaStar, FaRegStar, FaCheck, FaHeart, FaChartBar } from "react-icons/fa";
+import { FaStar, FaRegStar, FaCheck, FaHeart } from "react-icons/fa";
 import { MdCall } from "react-icons/md";
 import Image from "../Image";
 import Button from "../Button";
 import { RiShoppingCartLine } from "react-icons/ri";
+import { FiBarChart2 } from "react-icons/fi";
 
 const ProductCard = ({
   name,
@@ -28,7 +29,7 @@ const ProductCard = ({
         <p>{stock}</p>
       </div>
 
-      {/* Image container */}
+      
       <div className="md:w-[150px] md:h-[150px] mb-2 mx-auto relative">
         <Image
           src={image}
@@ -45,7 +46,7 @@ const ProductCard = ({
           </button>
           {/* Analytics Icon */}
           <button className=" p-2 rounded-full border border-primary shadow-md hover:bg-color-5">
-            <FaChartBar className="text-gray-500 w-5 h-5" />
+            <FiBarChart2 className="text-gray-500 w-5 h-5" />
           </button>
         </div>
 

@@ -3,6 +3,7 @@ import Button from "../Button";
 import Image from "../Image";
 import PTopBar from "../productTopBar/PTopBar";
 import { useNavigate } from "react-router-dom";
+import { FiChevronDown } from "react-icons/fi";
 
 const Filter = () => {
   const [selectedFilters, setSelectedFilters] = useState(0);
@@ -43,19 +44,19 @@ const Filter = () => {
     setSelectedColor(event.target.id);
   };
 
-  // Handle checkbox changes for categories and price ranges
-  const handleCheckboxChange = (event, type) => {
-    const value = event.target.id;
-    if (type === "category") {
-      setSelectedCategories((prev) =>
-        event.target.checked ? [...prev, value] : prev.filter((item) => item !== value)
-      );
-    } else if (type === "price") {
-      setSelectedPriceRanges((prev) =>
-        event.target.checked ? [...prev, value] : prev.filter((item) => item !== value)
-      );
-    }
-  };
+  // // Handle checkbox changes for categories and price ranges
+  // const handleCheckboxChange = (event, type) => {
+  //   const value = event.target.id;
+  //   if (type === "category") {
+  //     setSelectedCategories((prev) =>
+  //       event.target.checked ? [...prev, value] : prev.filter((item) => item !== value)
+  //     );
+  //   } else if (type === "price") {
+  //     setSelectedPriceRanges((prev) =>
+  //       event.target.checked ? [...prev, value] : prev.filter((item) => item !== value)
+  //     );
+  //   }
+  // };
 
   // Categories data
   const categories = [
@@ -100,7 +101,7 @@ const Filter = () => {
     < >
 
       <div className="flex  ">
-        <aside className="w-[270px] mt-4 pr-4">
+        <aside className=" relative w-[270px] mt-4 pr-4">
           <div className="mb-3">
             <button
               onClick={() => navigate(-1)}
@@ -109,134 +110,140 @@ const Filter = () => {
               &lt; Back
             </button>
           </div>
-          <div>
-            {/* Filters */}
-            <div className="px-4 py-7 mb-4 bg-color-1 shadow-md">
-              <div className="text-center">
-                <h2 className="text-base font-Poppins text-black font-bold mb-2">
-                  Filters
-                </h2>
-                <Button
-                  onClick={handleClearFilters}
-                  className="py-2 px-[61px] border-color-5 text-color-5 rounded-full mb-4"
-                >
-                  Clear Filter
-                </Button>
-              </div>
+          <div >
+            <div className=" ">
+              {/* Filters */}
+              <div className="px-4 py-7 mb-4 bg-color-1 shadow-md">
 
-              {/* Category Filter */}
-              <div className="mb-4">
-                <h3 className="font-semibold font-Poppins text-base text-black mb-2">
-                  Category
-                </h3>
-                <ul>
-                  {categories.map((category) => (
-                    <li
-                      className="font-Poppins text-sm leading-[1.70em] text-black"
-                      key={category.id}
-                    >
-                      <input
-                        className="mr-2 rounded-full"
-                        id={category.id}
-                        type="checkbox"
-                        onChange={(e) => handleCheckboxChange(e, "category")}
-                      />
-                      <label htmlFor={category.id}>
-                        {category.label} ({category.count})
-                      </label>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              {/* Price Filter */}
-              <div className="mb-4">
-                <h3 className="font-semibold font-Poppins text-base text-black mb-2">
-                  Price
-                </h3>
-                <ul>
-                  {priceRanges.map((price, index) => (
-                    <li
-                      className="font-Poppins text-sm leading-[1.70em] text-black"
-                      key={index}
-                    >
-                      <input
-                        className="mr-2"
-                        id={`price${index + 1}`}
-                        type="checkbox"
-                        onChange={(e) => handleCheckboxChange(e, "price")}
-                      />
-                      <label htmlFor={`price${index + 1}`}>{price}</label>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              {/* Color Filter */}
-              <div className="mb-4">
-                <h3 className="font-semibold font-Poppins text-base text-black mb-2">
-                  Color
-                </h3>
-                <ul className="flex gap-2">
-                  {colors.map((color) => (
-                    <li key={color.id}>
-                      <input
-                        className="hidden"
-                        id={color.id}
-                        type="radio"
-                        name="color"
-                        onChange={handleColorChange}
-                      />
-                      <label
-                        htmlFor={color.id}
-                        className={`block w-5 h-5 rounded-full cursor-pointer transition ${selectedColor === color.id
-                            ? "border-blueLight border-[3px] w-7 h-7"
-                            : ""
-                          }`}
-                        style={{ backgroundColor: color.hex }}
-                      ></label>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              {/* Apply Filters */}
-              <div className="mb-4">
-                <h3 className="font-semibold font-Poppins text-base text-black mb-2">
-                  Filter Name
-                </h3>
-                <Button
-                  onClick={handleApplyFilters}
-                  className="py-2 px-[45px] font-semibold text-sm rounded"
-                >
-                  Apply Filters ({selectedFilters})
-                </Button>
-              </div>
-            </div>
-
-            {/* Brand Filter */}
-            <div className="mb-4 py-7 px-4 bg-color-1 shadow-md">
-              <div className="text-center">
-                <h3 className="font-semibold font-Poppins text-base text-black mb-2">
-                  Brands
-                </h3>
-                <Button className="py-2 px-[63px] border-color-5 text-color-5 font-semibold text-sm rounded">
-                  All Brands
-                </Button>
-              </div>
-              <div className="mt-4 grid grid-cols-2 gap-4">
-                {brands.map((brand) => (
-                  <div
-                    key={brand.id}
-                    className="flex items-center justify-center p-2 border rounded-md bg-white hover:shadow-lg"
+                <div className="text-center">
+                  <h2 className="text-base font-Poppins text-black font-bold mb-2">
+                    Filters
+                  </h2>
+                  <Button
+                    onClick={handleClearFilters}
+                    className="py-2 md:px-[61px] px-[40px] border-color-5 text-color-5 rounded-full mb-4"
                   >
-                    <Image
-                      src={brand.logo}
-                      alt={brand.label}
-                      className="w-full h-auto object-contain"
-                    />
-                  </div>
-                ))}
+                    Clear Filter
+                  </Button>
+                </div>
+
+                {/* Category Filter */}
+                <div className="relative mb-4">
+                  <details className="group">
+                    <summary className="cursor-pointer  rounded-md text-base font-Poppins font-semibold text-black dev-jus ">
+                      <span>Category</span>
+                      <FiChevronDown
+                        className="w-4 h-4 text-black transform group-open:rotate-180 transition-transform"
+                      />
+                    </summary>
+                    <ul className="mt-2 space-y-2  rounded-md  ">
+                      {categories.map((category) => (
+                        <li
+                          key={category.id}
+                          className="flex justify-between font-Poppins text-sm leading-[1.70em] text-black"
+                        >
+                          <span>{category.label}</span>
+                          <span>{category.count}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </details>
+                </div>
+
+                {/* Price Filter */}
+                <div className="relative mb-4 ">
+                  <details className="group">
+                    <summary className="cursor-pointer  rounded-md font-semibold font-Poppins text-base text-black mb-2 dev-jus ">
+                      <span>Price</span>
+                      <FiChevronDown
+                        className="w-4 h-4 text-black transform group-open:rotate-180 transition-transform"
+                      />
+                    </summary>
+                    <ul className="mt-2    ">
+                      {priceRanges.map((price, index) => (
+                        <li
+                          key={index}
+                          className="flex justify-between font-Poppins text-sm leading-[1.70em] text-black cursor-pointer hover:bg-gray-200 pt-1 pb-1 rounded"
+                          onClick={() => handlePriceSelect(price)}
+                        >
+                          <span>{price}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </details>
+                </div>
+
+                {/* Color Filter */}
+                <div className="relative mb-4 ">
+                  <details className="group">
+                    <summary className="cursor-pointer  rounded-md font-semibold font-Poppins text-base text-black mb-2 dev-jus ">
+                      <span>Color</span>
+                      <FiChevronDown
+                        className="w-4 h-4 text-black transform group-open:rotate-180 transition-transform"
+                      />
+                    </summary>
+                    <ul className="flex gap-2">
+                      {colors.map((color) => (
+                        <li key={color.id}>
+                          <input
+                            className="hidden"
+                            id={color.id}
+                            type="radio"
+                            name="color"
+                            onChange={handleColorChange}
+                          />
+                          <label
+                            htmlFor={color.id}
+                            className={`block w-5 h-5 rounded-full cursor-pointer transition ${selectedColor === color.id
+                              ? "border-blueLight border-[3px] w-7 h-7"
+                              : ""
+                              }`}
+                            style={{ backgroundColor: color.hex }}
+                          ></label>
+                        </li>
+                      ))}
+                    </ul>
+                  </details>
+                </div>
+
+                {/* Apply Filters */}
+                <div className="mb-4">
+                  <h3 className="font-semibold font-Poppins text-base text-black mb-2">
+                    Filter Name
+                  </h3>
+                  <Button
+                    onClick={handleApplyFilters}
+                    className="py-2 md:px-[45px]  px-[30px] font-semibold text-sm rounded"
+                  >
+                    Apply Filters ({selectedFilters})
+                  </Button>
+                </div>
+              </div>
+
+              {/* Brand Filter */}
+              <div className="mb-4 py-7 px-4 bg-color-1 shadow-md">
+                <div className="text-center">
+                  <h3 className="font-semibold font-Poppins text-base text-black mb-2">
+                    Brands
+                  </h3>
+                  <Button className="py-2 px-[63px] border-color-5 text-color-5 font-semibold text-sm rounded">
+                    All Brands
+                  </Button>
+                </div>
+                <div className="mt-4 grid grid-cols-2 gap-4">
+                  {brands.map((brand) => (
+                    <div
+                      key={brand.id}
+                      className="flex items-center justify-center p-2 border rounded-md bg-white hover:shadow-lg"
+                    >
+                      <Image
+                        src={brand.logo}
+                        alt={brand.label}
+                        className="w-full h-auto object-contain"
+                      />
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
 
