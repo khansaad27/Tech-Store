@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { FaTh } from "react-icons/fa";
 import { HiMiniBarsArrowDown } from "react-icons/hi2";
 import PaginatedItems from "../../component/Paginated/PaginatedItems";
+import PrestigeSeries from "../PrestigeSeries";
 
 const PTopBar = ({ className = "" }) => {
   const [itemsPerPage, setItemsPerPage] = useState(6);
@@ -108,6 +109,7 @@ const PTopBar = ({ className = "" }) => {
           sortOption={selectedOption}
         />
       </div>
+         <PrestigeSeries/>
     </div>
   );
 };

@@ -5,6 +5,7 @@ import PTopBar from "../productTopBar/PTopBar";
 import { useNavigate } from "react-router-dom";
 import { FiChevronDown } from "react-icons/fi";
 
+
 const Filter = () => {
   const [selectedFilters, setSelectedFilters] = useState(0);
   const [selectedColor, setSelectedColor] = useState(null);
@@ -280,7 +281,7 @@ const Filter = () => {
           <PTopBar />
         </div>
       </div>
-
+     
 
     </>
 
